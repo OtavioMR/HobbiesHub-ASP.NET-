@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\HobbiesHub-API-REST.props" />
+</Project>

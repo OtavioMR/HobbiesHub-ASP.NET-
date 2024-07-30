@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\HobbiesHub-API-REST.props" />
+</Project>
