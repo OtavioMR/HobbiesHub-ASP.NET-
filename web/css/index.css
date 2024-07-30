@@ -1,8 +1,13 @@
+@font-face {
+    font-family: 'Shrikhand-Regular';
+    src: url('../fonts/Shrikhand-Regular.otf') format('opentype'); /* Caminho relativo ao CSS */
+}
+
 body {
     background-color: #4a148C;
     margin: 0;
     padding: 0;
-    color: #fff; /* Texto branco para melhor contraste */
+    color: #333;
 }
 
 header {
@@ -19,6 +24,7 @@ header h1 {
     transform: scaleX(1.5);
     font-size: 5rem;
     margin: 0;
+    font-family: 'Shrikhand-Regular'; /* Aplica a fonte personalizada */
 }
 
 nav ul {
@@ -38,10 +44,11 @@ nav ul li a {
     text-decoration: none;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
+.container-body-home {
+    display: flex;
+    flex-direction: column; /* Organiza os itens em coluna */
+    align-items: center; /* Centraliza horizontalmente os itens no contêiner */
+    gap: 20px; /* Espaço entre os itens */
 }
 
 .body-home {
@@ -51,22 +58,43 @@ nav ul li a {
 }
 
 .body-home img {
-    max-width: 100%;
+    width: auto;
     height: auto;
 }
 
 .buttons {
-    margin-top: 1rem;
+    grid-template-columns: repeat(4, 1fr); /* 3 colunas de igual tamanho */
+    grid-gap: 10px; /* Espaço entre os itens */
+    height: 50px;
+    border: 1px solid black;
+    align-items: center;
+    justify-content: center;
 }
 
+
 .buttons button {
-    margin: 0 1rem;
     padding: 1rem 2rem;
     border: none;
     background-color: #ffeb3b;
     color: black;
     cursor: pointer;
     font-size: 1rem;
+    .box:nth-child(1) { grid-column: 2/ 3; } /* Ocupa as duas primeiras colunas */
+    align-items: center;
+    justify-content: center;
+}
+
+.circulo-amarelo{
+    border: 2px solid black;
+        width: 20rem; /* Define a largura do círculo */
+        height: 20rem; /* Define a altura do círculo */
+        background-color: yellow; /* Define a cor de fundo do círculo */
+        border-radius: 50%; /* Faz com que o elemento se torne um círculo */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* Para centralizar o texto no círculo (opcional) */
+        text-align: center;
 }
 
 footer {
