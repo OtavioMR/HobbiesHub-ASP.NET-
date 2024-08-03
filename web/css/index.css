@@ -1,76 +1,100 @@
 @font-face {
-    font-family: 'Shrikhand-Regular';
-    src: url('../fonts/Shrikhand-Regular.otf') format('opentype'); /* Caminho relativo ao CSS */
+    font-family: Shrikhand-Regular;
+    src: url(../fonts/Shrikhand-Regular.otf);
 }
 
 body {
-    background-color: #4a148C;
+    background: linear-gradient(to bottom, #4f1fe2, #4a148C, #340a68);
     margin: 0;
     padding: 0;
     color: #333;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 130vh;
 }
 
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     background-color: #ffeb3b;
     color: black;
-    height: 120px; /* Ajuste a altura conforme necessário */
+    padding: 1rem;
+    z-index: 1000;
 }
 
 header h1 {
-    transform: scaleX(1.5);
-    font-size: 5rem;
+    font-family: Shrikhand-Regular, cursive;
+    font-size: 2.5rem;
     margin: 0;
-    font-family: 'Shrikhand-Regular'; /* Aplica a fonte personalizada */
 }
 
 nav ul {
     list-style: none;
-    color: black;
-    padding: 1rem;
-    text-align: center;
+    display: flex;
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 1rem;
+    margin-left: 20px;
 }
 
 nav ul li a {
     color: black;
     text-decoration: none;
+    font-weight: bold;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.search-form input[type="text"] {
+    padding: 0.5rem;
+    border: 1px solid#333;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-right: 10px;
+}
+
+.search-form button:hover {
+    background-color: #ffc107;
 }
 
 .container-body-home {
+    flex: 1;
     display: flex;
-    flex-direction: column; /* Organiza os itens em coluna */
-    align-items: center; /* Centraliza horizontalmente os itens no contêiner */
-    gap: 20px; /* Espaço entre os itens */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 20px 20px; /* Ajuste o padding-top para evitar sobreposição com o header fixo */
+    gap: 20px;
 }
 
-.body-home {
+.circulo-amarelo {
+    border: 2px solid black;
+    width: 20rem;
+    height: 20rem;
+    background-color: yellow;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    background-color: #4a148C;
-    padding: 2rem;
-}
-
-.body-home img {
-    width: auto;
-    height: auto;
 }
 
 .buttons {
-    grid-template-columns: repeat(4, 1fr); /* 3 colunas de igual tamanho */
-    grid-gap: 10px; /* Espaço entre os itens */
-    height: 50px;
-    border: 1px solid black;
-    align-items: center;
-    justify-content: center;
+    display: flex;
+    gap: 20px;
 }
-
 
 .buttons button {
     padding: 1rem 2rem;
@@ -79,36 +103,22 @@ nav ul li a {
     color: black;
     cursor: pointer;
     font-size: 1rem;
-    .box:nth-child(1) { grid-column: 2/ 3; } /* Ocupa as duas primeiras colunas */
-    align-items: center;
-    justify-content: center;
+    font-weight: bold;
+    border: 2px solid black;
+    transition: background-color 0.3s ease;
 }
 
-.circulo-amarelo{
-    border: 2px solid black;
-        width: 20rem; /* Define a largura do círculo */
-        height: 20rem; /* Define a altura do círculo */
-        background-color: yellow; /* Define a cor de fundo do círculo */
-        border-radius: 50%; /* Faz com que o elemento se torne um círculo */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        /* Para centralizar o texto no círculo (opcional) */
-        text-align: center;
+.buttons button:hover {
+    background-color: #ffc107;
 }
 
 footer {
+    bottom: 0;
+    left: 0;
+    right: 0;
     color: black;
     background-color: #ffeb3b;
     text-align: center;
     padding: 1rem;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
-
-footer a {
-    color: black;
-    margin: 0 0.5rem;
-    text-decoration: none;
+    z-index: 1000;
 }
