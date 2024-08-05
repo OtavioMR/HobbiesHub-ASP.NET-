@@ -42,6 +42,7 @@ nav ul {
 }
 
 nav ul li {
+    margin-top: 1rem;
     margin-left: 20px;
 }
 
@@ -51,10 +52,23 @@ nav ul li a {
     font-weight: bold;
 }
 
+.img-login {
+    position: relative;
+    transition: all 0.3s;
+    padding: 5px;
+    width: 2.5rem;
+}
+
+.img-login:hover {
+    filter:drop-shadow(3px 3px 3px #4a148C);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
 .search-form {
     display: flex;
     align-items: center;
-    margin-left: auto;
+    
 }
 
 .search-form input[type="text"] {
@@ -80,7 +94,7 @@ nav ul li a {
 }
 
 .circulo-amarelo {
-    border: 2px solid black;
+    border: 5px solid black;
     width: 20rem;
     height: 20rem;
     background-color: yellow;
@@ -91,12 +105,18 @@ nav ul li a {
     text-align: center;
 }
 
+.hobby-img {
+    width: 15rem;
+    height: 15rem;
+}
+
 .buttons {
     display: flex;
     gap: 20px;
 }
 
 .buttons button {
+    margin-top: 2rem;
     padding: 1rem 2rem;
     border: none;
     background-color: #ffeb3b;
@@ -119,6 +139,15 @@ footer {
     color: black;
     background-color: #ffeb3b;
     text-align: center;
-    padding: 1rem;
     z-index: 1000;
 }
+
+footer a {
+    font-size: 30px;
+    margin: 5px;
+}
+
+footer p {
+    font-size: 15px;
+}
+
