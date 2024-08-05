@@ -11,7 +11,7 @@ body {
     font-family: 'Roboto', sans-serif;
     display: flex;
     flex-direction: column;
-    min-height: 130vh;
+    min-height: 110vh;
 }
 
 header {
@@ -105,9 +105,44 @@ nav ul li a {
     text-align: center;
 }
 
-.hobby-img {
-    width: 15rem;
-    height: 15rem;
+#logo {
+    width: 7rem;
+    height: 7rem;
+}
+
+.perfil-logo-img {
+    display: flex;
+    position: absolute;
+    margin-top: 10rem;
+    transition: background-color 0.3s ease;
+}
+
+.coracao-logo-img {
+    display: flex;
+    margin-left: 12rem;
+    margin-top: 2rem;
+    position: absolute;
+    transition: background-color 0.3s ease;
+}
+
+.coracao-logo-img:hover {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.livro-logo-img {
+    display: flex;
+    margin-top: -10rem;
+    position: absolute;
+    transition: background-color 0.3s ease;
+}
+
+.nota-musical-logo {
+    display: flex;
+    margin-right: 13rem;
+    position: absolute;
+    margin-top: 2rem;
+    transition: background-color 0.3s ease;
 }
 
 .buttons {
