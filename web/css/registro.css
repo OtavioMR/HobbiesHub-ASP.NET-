@@ -4,11 +4,14 @@
 }
 
 body {
-    justify-content: space-between; /* Ajuste para ocupar toda a tela */
-    min-height: 100vh; /* Garante que o body tenha pelo menos a altura da tela */
+    justify-content: space-between;
+    /* Ajuste para ocupar toda a tela */
+    min-height: 100vh;
+    /* Garante que o body tenha pelo menos a altura da tela */
+    min-width: auto;
     background: linear-gradient(to bottom, #4f1fe2, #4a148C, #340a68);
     margin: 0;
-    padding: 0;
+    padding: 1rem;
     color: #333;
     font-family: 'Roboto', sans-serif;
     display: flex;
@@ -63,7 +66,7 @@ nav ul li a {
 }
 
 .img-login:hover {
-    filter:drop-shadow(3px 3px 3px #4a148C);
+    filter: drop-shadow(3px 3px 3px #4a148C);
     -webkit-transform: scale(1.2);
     transform: scale(1.2);
 }
@@ -71,7 +74,7 @@ nav ul li a {
 .search-form {
     display: flex;
     align-items: center;
-    
+
 }
 
 .search-form input[type="text"] {
@@ -103,6 +106,40 @@ label {
     font-size: 20px;
 }
 
+.tittle-login span {
+    position: relative;
+    /* Permite ajustar a posição do texto específico */
+    top: -2rem;
+    /* Ajuste este valor para posicionar o texto como desejado */
+}
+
+.tittle-login {
+    padding: 0;
+    margin-top: 4rem;
+    font-size: 60px;
+    color: black;
+    font-family: Shrikhand-Regular, cursive;
+}
+
+.cadastro-usuario {
+    margin-top: 1rem;
+    background: none;
+    border: none;
+    border-bottom: 4px solid black;
+    outline: none;
+    color: black;
+    font-size: 20px;
+    width: 25rem;
+    height: auto;
+    transition: transform 0.3s ease;
+    /* Adiciona uma transição suave de 0.3 segundos */
+}
+
+.cadastro-usuario:hover {
+    transform: scale(1.1);
+    /* Aumenta o tamanho em 10% quando o mouse está sobre o input */
+}
+
 footer {
     margin-top: auto;
     bottom: 0;
@@ -123,4 +160,3 @@ footer a {
 footer p {
     font-size: 15px;
 }
-
