@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Aluno15\\Desktop\\HobbiesHub-ASP.NET-\\HobbiesHub-API-REST\\HobbiesHub-API-REST.csproj": {}
+    "C:\\Users\\Otavio\\Desktop\\HobbiesHub-ASP.NET-\\HobbiesHub-API-REST\\HobbiesHub-API-REST.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Aluno15\\Desktop\\HobbiesHub-ASP.NET-\\HobbiesHub-API-REST\\HobbiesHub-API-REST.csproj": {
+    "C:\\Users\\Otavio\\Desktop\\HobbiesHub-ASP.NET-\\HobbiesHub-API-REST\\HobbiesHub-API-REST.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Aluno15\\Desktop\\HobbiesHub-ASP.NET-\\HobbiesHub-API-REST\\HobbiesHub-API-REST.csproj",
+        "projectUniqueName": "C:\\Users\\Otavio\\Desktop\\HobbiesHub-ASP.NET-\\HobbiesHub-API-REST\\HobbiesHub-API-REST.csproj",
         "projectName": "HobbiesHub-API-REST",
-        "projectPath": "C:\\Users\\Aluno15\\Desktop\\HobbiesHub-ASP.NET-\\HobbiesHub-API-REST\\HobbiesHub-API-REST.csproj",
-        "packagesPath": "C:\\Users\\Aluno15\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Aluno15\\Desktop\\HobbiesHub-ASP.NET-\\HobbiesHub-API-REST\\obj\\",
+        "projectPath": "C:\\Users\\Otavio\\Desktop\\HobbiesHub-ASP.NET-\\HobbiesHub-API-REST\\HobbiesHub-API-REST.csproj",
+        "packagesPath": "C:\\Users\\Otavio\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Otavio\\Desktop\\HobbiesHub-ASP.NET-\\HobbiesHub-API-REST\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Aluno15\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Otavio\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
