@@ -1,9 +1,13 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Aluno15\\Desktop\\HobbiesHub-ASP.NET-\\HobbiesHub-API-REST\\",
+  "WorkspaceRootPath": "C:\\Users\\Otavio\\source\\repos\\HobbiesHub-ASP.NET-\\HobbiesHub-API-REST\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{078792EE-3938-4BE1-894B-7A31F8CE09B7}|HobbiesHub-API-REST.csproj|c:\\users\\aluno15\\desktop\\hobbieshub-asp.net-\\hobbieshub-api-rest\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{078792EE-3938-4BE1-894B-7A31F8CE09B7}|HobbiesHub-API-REST.csproj|c:\\users\\otavio\\source\\repos\\hobbieshub-asp.net-\\hobbieshub-api-rest\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{078792EE-3938-4BE1-894B-7A31F8CE09B7}|HobbiesHub-API-REST.csproj|solutionrelative:weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{078792EE-3938-4BE1-894B-7A31F8CE09B7}|HobbiesHub-API-REST.csproj|c:\\users\\otavio\\source\\repos\\hobbieshub-asp.net-\\hobbieshub-api-rest\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{078792EE-3938-4BE1-894B-7A31F8CE09B7}|HobbiesHub-API-REST.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -14,17 +18,38 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "WeatherForecast.cs",
+              "DocumentMoniker": "C:\\Users\\Otavio\\source\\repos\\HobbiesHub-ASP.NET-\\HobbiesHub-API-REST\\WeatherForecast.cs",
+              "RelativeDocumentMoniker": "WeatherForecast.cs",
+              "ToolTip": "C:\\Users\\Otavio\\source\\repos\\HobbiesHub-ASP.NET-\\HobbiesHub-API-REST\\WeatherForecast.cs",
+              "RelativeToolTip": "WeatherForecast.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T21:29:10.034Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Aluno15\\Desktop\\HobbiesHub-ASP.NET-\\HobbiesHub-API-REST\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\Otavio\\source\\repos\\HobbiesHub-ASP.NET-\\HobbiesHub-API-REST\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\Aluno15\\Desktop\\HobbiesHub-ASP.NET-\\HobbiesHub-API-REST\\Program.cs",
+              "ToolTip": "C:\\Users\\Otavio\\source\\repos\\HobbiesHub-ASP.NET-\\HobbiesHub-API-REST\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-22T14:58:01.314Z",
               "EditorCaption": ""
