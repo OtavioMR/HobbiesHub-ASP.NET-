@@ -11,4 +11,3 @@ namespace HobbiesHub_API_REST
         public string? Summary { get; set; }
     }
 }
-/////fdsmfsdnvnsvnvkdfnvndfvndfvmdvdfvfvdvvf

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Otavio\\Desktop\\HobbiesHub-ASP.NET-\\HobbiesHub-API-REST\\HobbiesHub-API-REST.csproj": {}
+    "C:\\Users\\Proatec\\Desktop\\HobbiesHub-ASP.NET-\\HobbiesHub-API-REST\\HobbiesHub-API-REST.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Otavio\\Desktop\\HobbiesHub-ASP.NET-\\HobbiesHub-API-REST\\HobbiesHub-API-REST.csproj": {
+    "C:\\Users\\Proatec\\Desktop\\HobbiesHub-ASP.NET-\\HobbiesHub-API-REST\\HobbiesHub-API-REST.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Otavio\\Desktop\\HobbiesHub-ASP.NET-\\HobbiesHub-API-REST\\HobbiesHub-API-REST.csproj",
+        "projectUniqueName": "C:\\Users\\Proatec\\Desktop\\HobbiesHub-ASP.NET-\\HobbiesHub-API-REST\\HobbiesHub-API-REST.csproj",
         "projectName": "HobbiesHub-API-REST",
-        "projectPath": "C:\\Users\\Otavio\\Desktop\\HobbiesHub-ASP.NET-\\HobbiesHub-API-REST\\HobbiesHub-API-REST.csproj",
-        "packagesPath": "C:\\Users\\Otavio\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Otavio\\Desktop\\HobbiesHub-ASP.NET-\\HobbiesHub-API-REST\\obj\\",
+        "projectPath": "C:\\Users\\Proatec\\Desktop\\HobbiesHub-ASP.NET-\\HobbiesHub-API-REST\\HobbiesHub-API-REST.csproj",
+        "packagesPath": "C:\\Users\\Proatec\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Proatec\\Desktop\\HobbiesHub-ASP.NET-\\HobbiesHub-API-REST\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Otavio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Proatec\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -70,7 +70,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
