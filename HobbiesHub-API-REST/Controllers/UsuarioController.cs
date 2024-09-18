@@ -1,5 +1,6 @@
 ﻿using HobbiesHub_API_REST.Models;
 using Microsoft.AspNetCore.Mvc;
+using HobbiesHub_API_REST.Repositories.Interfaces;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -64,7 +65,7 @@ namespace HobbiesHub_API_REST.Controllers
 
             try
             {
-                UsuarioModel usuarioAtualizado = await _usuarioRepository.UpdateUsuario(usuario);
+                UsuarioModel usuarioAtualizado = await _usuarioRepository.UpdateUsuario(usuario, id); // Passa o id também
                 if (usuarioAtualizado == null)
                 {
                     return NotFound(new { message = "Usuário não encontrado." });

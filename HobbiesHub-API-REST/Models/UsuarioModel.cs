@@ -8,6 +8,6 @@
         public string UsuarioNameSystem { get; set; }  
         public string UsuarioSenhaHash { get; set; }
         public int UsuarioAge { get; set; }
-        public int DateCadastrro { get; set; }
+        public int UsuarioDateCadastro { get; set; }
     }
 }
