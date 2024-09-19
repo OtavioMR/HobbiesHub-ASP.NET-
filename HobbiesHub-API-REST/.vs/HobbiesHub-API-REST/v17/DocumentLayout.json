@@ -3,28 +3,52 @@
   "WorkspaceRootPath": "C:\\Users\\Proatec\\Desktop\\HobbiesHub-ASP.NET-\\HobbiesHub-API-REST\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{078792EE-3938-4BE1-894B-7A31F8CE09B7}|HobbiesHub-API-REST.csproj|c:\\users\\proatec\\desktop\\hobbieshub-asp.net-\\hobbieshub-api-rest\\data\\hobbieshubsystemdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{078792EE-3938-4BE1-894B-7A31F8CE09B7}|HobbiesHub-API-REST.csproj|solutionrelative:data\\hobbieshubsystemdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{078792EE-3938-4BE1-894B-7A31F8CE09B7}|HobbiesHub-API-REST.csproj|c:\\users\\proatec\\desktop\\hobbieshub-asp.net-\\hobbieshub-api-rest\\repositories\\usuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{078792EE-3938-4BE1-894B-7A31F8CE09B7}|HobbiesHub-API-REST.csproj|solutionrelative:repositories\\usuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{078792EE-3938-4BE1-894B-7A31F8CE09B7}|HobbiesHub-API-REST.csproj|c:\\users\\proatec\\desktop\\hobbieshub-asp.net-\\hobbieshub-api-rest\\models\\usuariomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{078792EE-3938-4BE1-894B-7A31F8CE09B7}|HobbiesHub-API-REST.csproj|solutionrelative:models\\usuariomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{078792EE-3938-4BE1-894B-7A31F8CE09B7}|HobbiesHub-API-REST.csproj|c:\\users\\proatec\\desktop\\hobbieshub-asp.net-\\hobbieshub-api-rest\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{078792EE-3938-4BE1-894B-7A31F8CE09B7}|HobbiesHub-API-REST.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{078792EE-3938-4BE1-894B-7A31F8CE09B7}|HobbiesHub-API-REST.csproj|c:\\users\\proatec\\desktop\\hobbieshub-asp.net-\\hobbieshub-api-rest\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{078792EE-3938-4BE1-894B-7A31F8CE09B7}|HobbiesHub-API-REST.csproj|solutionrelative:controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{078792EE-3938-4BE1-894B-7A31F8CE09B7}|HobbiesHub-API-REST.csproj|c:\\users\\proatec\\desktop\\hobbieshub-asp.net-\\hobbieshub-api-rest\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{078792EE-3938-4BE1-894B-7A31F8CE09B7}|HobbiesHub-API-REST.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Proatec\\Desktop\\HobbiesHub-ASP.NET-\\HobbiesHub-API-REST\\Migrations\\20240919132301_InitialDB01.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20240919132301_InitialDB01.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Proatec\\Desktop\\HobbiesHub-ASP.NET-\\HobbiesHub-API-REST\\Migrations\\20240919131801_InitialDB02.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20240919131801_InitialDB02.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Proatec\\Desktop\\HobbiesHub-ASP.NET-\\HobbiesHub-API-REST\\Migrations\\20240919124626_InitialDB2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20240919124626_InitialDB2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{078792EE-3938-4BE1-894B-7A31F8CE09B7}|HobbiesHub-API-REST.csproj|c:\\users\\proatec\\desktop\\hobbieshub-asp.net-\\hobbieshub-api-rest\\data\\hobbieshubsystemdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{078792EE-3938-4BE1-894B-7A31F8CE09B7}|HobbiesHub-API-REST.csproj|solutionrelative:data\\hobbieshubsystemdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Proatec\\Desktop\\HobbiesHub-ASP.NET-\\HobbiesHub-API-REST\\Migrations\\20240919124200_InitialDB.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20240919124200_InitialDB.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{078792EE-3938-4BE1-894B-7A31F8CE09B7}|HobbiesHub-API-REST.csproj|c:\\users\\proatec\\desktop\\hobbieshub-asp.net-\\hobbieshub-api-rest\\repositories\\usuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{078792EE-3938-4BE1-894B-7A31F8CE09B7}|HobbiesHub-API-REST.csproj|solutionrelative:repositories\\usuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{078792EE-3938-4BE1-894B-7A31F8CE09B7}|HobbiesHub-API-REST.csproj|c:\\users\\proatec\\desktop\\hobbieshub-asp.net-\\hobbieshub-api-rest\\repositories\\interfaces\\iusuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{078792EE-3938-4BE1-894B-7A31F8CE09B7}|HobbiesHub-API-REST.csproj|solutionrelative:repositories\\interfaces\\iusuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{078792EE-3938-4BE1-894B-7A31F8CE09B7}|HobbiesHub-API-REST.csproj|c:\\users\\proatec\\desktop\\hobbieshub-asp.net-\\hobbieshub-api-rest\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{078792EE-3938-4BE1-894B-7A31F8CE09B7}|HobbiesHub-API-REST.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{078792EE-3938-4BE1-894B-7A31F8CE09B7}|HobbiesHub-API-REST.csproj|c:\\users\\proatec\\desktop\\hobbieshub-asp.net-\\hobbieshub-api-rest\\models\\usuariomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{078792EE-3938-4BE1-894B-7A31F8CE09B7}|HobbiesHub-API-REST.csproj|solutionrelative:models\\usuariomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{078792EE-3938-4BE1-894B-7A31F8CE09B7}|HobbiesHub-API-REST.csproj|c:\\users\\proatec\\desktop\\hobbieshub-asp.net-\\hobbieshub-api-rest\\data\\map\\usuariomap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{078792EE-3938-4BE1-894B-7A31F8CE09B7}|HobbiesHub-API-REST.csproj|solutionrelative:data\\map\\usuariomap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +58,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,80 +74,158 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
+              "Title": "20240919131801_InitialDB02.cs",
+              "DocumentMoniker": "C:\\Users\\Proatec\\Desktop\\HobbiesHub-ASP.NET-\\HobbiesHub-API-REST\\Migrations\\20240919131801_InitialDB02.cs",
+              "RelativeDocumentMoniker": "Migrations\\20240919131801_InitialDB02.cs",
+              "ToolTip": "C:\\Users\\Proatec\\Desktop\\HobbiesHub-ASP.NET-\\HobbiesHub-API-REST\\Migrations\\20240919131801_InitialDB02.cs",
+              "RelativeToolTip": "Migrations\\20240919131801_InitialDB02.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-19T13:18:01.867Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "20240919124626_InitialDB2.cs",
+              "DocumentMoniker": "C:\\Users\\Proatec\\Desktop\\HobbiesHub-ASP.NET-\\HobbiesHub-API-REST\\Migrations\\20240919124626_InitialDB2.cs",
+              "RelativeDocumentMoniker": "Migrations\\20240919124626_InitialDB2.cs",
+              "ToolTip": "C:\\Users\\Proatec\\Desktop\\HobbiesHub-ASP.NET-\\HobbiesHub-API-REST\\Migrations\\20240919124626_InitialDB2.cs",
+              "RelativeToolTip": "Migrations\\20240919124626_InitialDB2.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-19T12:46:26.217Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "20240919124200_InitialDB.cs",
+              "DocumentMoniker": "C:\\Users\\Proatec\\Desktop\\HobbiesHub-ASP.NET-\\HobbiesHub-API-REST\\Migrations\\20240919124200_InitialDB.cs",
+              "RelativeDocumentMoniker": "Migrations\\20240919124200_InitialDB.cs",
+              "ToolTip": "C:\\Users\\Proatec\\Desktop\\HobbiesHub-ASP.NET-\\HobbiesHub-API-REST\\Migrations\\20240919124200_InitialDB.cs",
+              "RelativeToolTip": "Migrations\\20240919124200_InitialDB.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-19T12:42:00.383Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UsuarioMap.cs",
+              "DocumentMoniker": "C:\\Users\\Proatec\\Desktop\\HobbiesHub-ASP.NET-\\HobbiesHub-API-REST\\Data\\Map\\UsuarioMap.cs",
+              "RelativeDocumentMoniker": "Data\\Map\\UsuarioMap.cs",
+              "ToolTip": "C:\\Users\\Proatec\\Desktop\\HobbiesHub-ASP.NET-\\HobbiesHub-API-REST\\Data\\Map\\UsuarioMap.cs",
+              "RelativeToolTip": "Data\\Map\\UsuarioMap.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-19T12:21:51.121Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Proatec\\Desktop\\HobbiesHub-ASP.NET-\\HobbiesHub-API-REST\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\Proatec\\Desktop\\HobbiesHub-ASP.NET-\\HobbiesHub-API-REST\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-19T11:59:09.274Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "UsuarioRepository.cs",
               "DocumentMoniker": "C:\\Users\\Proatec\\Desktop\\HobbiesHub-ASP.NET-\\HobbiesHub-API-REST\\Repositories\\UsuarioRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\UsuarioRepository.cs",
               "ToolTip": "C:\\Users\\Proatec\\Desktop\\HobbiesHub-ASP.NET-\\HobbiesHub-API-REST\\Repositories\\UsuarioRepository.cs",
               "RelativeToolTip": "Repositories\\UsuarioRepository.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAUwE4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD0AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-18T13:42:08.685Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "IUsuarioRepository.cs",
               "DocumentMoniker": "C:\\Users\\Proatec\\Desktop\\HobbiesHub-ASP.NET-\\HobbiesHub-API-REST\\Repositories\\Interfaces\\IUsuarioRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\Interfaces\\IUsuarioRepository.cs",
               "ToolTip": "C:\\Users\\Proatec\\Desktop\\HobbiesHub-ASP.NET-\\HobbiesHub-API-REST\\Repositories\\Interfaces\\IUsuarioRepository.cs",
               "RelativeToolTip": "Repositories\\Interfaces\\IUsuarioRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-18T13:32:45.561Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "HobbiesHubSystemDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\Proatec\\Desktop\\HobbiesHub-ASP.NET-\\HobbiesHub-API-REST\\Data\\HobbiesHubSystemDbContext.cs",
-              "RelativeDocumentMoniker": "Data\\HobbiesHubSystemDbContext.cs",
-              "ToolTip": "C:\\Users\\Proatec\\Desktop\\HobbiesHub-ASP.NET-\\HobbiesHub-API-REST\\Data\\HobbiesHubSystemDbContext.cs",
-              "RelativeToolTip": "Data\\HobbiesHubSystemDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-18T12:05:38.148Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "UsuarioController.cs",
               "DocumentMoniker": "C:\\Users\\Proatec\\Desktop\\HobbiesHub-ASP.NET-\\HobbiesHub-API-REST\\Controllers\\UsuarioController.cs",
               "RelativeDocumentMoniker": "Controllers\\UsuarioController.cs",
               "ToolTip": "C:\\Users\\Proatec\\Desktop\\HobbiesHub-ASP.NET-\\HobbiesHub-API-REST\\Controllers\\UsuarioController.cs",
               "RelativeToolTip": "Controllers\\UsuarioController.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAA9wF0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAwEIAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-17T12:52:09.512Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UsuarioModel.cs",
-              "DocumentMoniker": "C:\\Users\\Proatec\\Desktop\\HobbiesHub-ASP.NET-\\HobbiesHub-API-REST\\Models\\UsuarioModel.cs",
-              "RelativeDocumentMoniker": "Models\\UsuarioModel.cs",
-              "ToolTip": "C:\\Users\\Proatec\\Desktop\\HobbiesHub-ASP.NET-\\HobbiesHub-API-REST\\Models\\UsuarioModel.cs",
-              "RelativeToolTip": "Models\\UsuarioModel.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAxwA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-17T12:45:29.463Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Proatec\\Desktop\\HobbiesHub-ASP.NET-\\HobbiesHub-API-REST\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\Proatec\\Desktop\\HobbiesHub-ASP.NET-\\HobbiesHub-API-REST\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAIAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAABoAAAAAAAAAAADwvzIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-17T12:25:29.201Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "20240919132301_InitialDB01.cs",
+              "DocumentMoniker": "C:\\Users\\Proatec\\Desktop\\HobbiesHub-ASP.NET-\\HobbiesHub-API-REST\\Migrations\\20240919132301_InitialDB01.cs",
+              "RelativeDocumentMoniker": "Migrations\\20240919132301_InitialDB01.cs",
+              "ToolTip": "C:\\Users\\Proatec\\Desktop\\HobbiesHub-ASP.NET-\\HobbiesHub-API-REST\\Migrations\\20240919132301_InitialDB01.cs",
+              "RelativeToolTip": "Migrations\\20240919132301_InitialDB01.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-19T13:23:01.243Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "HobbiesHubSystemDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Proatec\\Desktop\\HobbiesHub-ASP.NET-\\HobbiesHub-API-REST\\Data\\HobbiesHubSystemDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\HobbiesHubSystemDbContext.cs",
+              "ToolTip": "C:\\Users\\Proatec\\Desktop\\HobbiesHub-ASP.NET-\\HobbiesHub-API-REST\\Data\\HobbiesHubSystemDbContext.cs",
+              "RelativeToolTip": "Data\\HobbiesHubSystemDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-18T12:05:38.148Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "UsuarioModel.cs",
+              "DocumentMoniker": "C:\\Users\\Proatec\\Desktop\\HobbiesHub-ASP.NET-\\HobbiesHub-API-REST\\Models\\UsuarioModel.cs",
+              "RelativeDocumentMoniker": "Models\\UsuarioModel.cs",
+              "ToolTip": "C:\\Users\\Proatec\\Desktop\\HobbiesHub-ASP.NET-\\HobbiesHub-API-REST\\Models\\UsuarioModel.cs",
+              "RelativeToolTip": "Models\\UsuarioModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-17T12:45:29.463Z",
               "EditorCaption": ""
             }
           ]
