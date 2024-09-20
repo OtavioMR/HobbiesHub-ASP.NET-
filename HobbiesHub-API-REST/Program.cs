@@ -1,6 +1,8 @@
 using HobbiesHub_API_REST.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using HobbiesHub_API_REST.Repositories.Interfaces;
+using HobbiesHub_API_REST.Repositories;
 
 public class Program
 {
@@ -16,6 +18,9 @@ public class Program
         builder.Services.AddDbContext<HobbiesHubSystemDbContext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
         );
+
+        // Registro do repositório
+        builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 
         // Add services to the container.
         builder.Services.AddCors(options =>
