@@ -1,0 +1,211 @@
+@font-face {
+    font-family: Shrikhand-Regular;
+    src: url(../fonts/Shrikhand-Regular.otf);
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to bottom, #4f1fe2, #4a148C, #340a68);
+}
+
+.navbar {
+    background-color: #ffeb3b !important;
+    color: black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Garantir que o navbar fique sobre outros elementos */
+}
+
+.navbar-brand {
+    font-family: Shrikhand-Regular, cursive;
+    font-size: 2.5rem;
+}
+
+.nav-link {
+    color: black !important;
+}
+
+h1 {
+    background-color: #FFD700;
+    color: #6A0DAD;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 80px); /* Subtrai a altura do footer se necessário */
+}
+
+.titulo-grupo {
+    margin-top: 15%;
+    width: 40rem;
+    height: 5;
+}
+
+.titulo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#group-form {
+    background-color: #FFD700;
+    padding: 20px;
+    border-radius: 10px;
+    color: #6A0DAD;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 80%;
+    max-width: 600px;
+    min-width: 300px;
+    margin: 20px auto;
+}
+
+input[type="text"],
+input[type="number"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 45%;
+}
+
+.btn-cancel {
+    background-color: #6A0DAD;
+    color: #FFD700;
+}
+
+.btn-confirm {
+    background-color: hsl(275, 86%, 36%);
+    color: #FFD700;
+}
+
+.btn-cancel:hover,
+.btn-confirm:hover {
+    opacity: 0.9;
+}
+
+/* Estilos para o botão do dropdown */
+.dropdown-btn {
+    cursor: pointer;
+    width: 3rem;
+}
+
+/* Dropdown escondido por padrão */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    margin-top: 8.5%;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+/* Estilo das opções dentro do dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 20px; /* Ajuste para espaçamento horizontal */
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid #ddd;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Mostra o dropdown quando ativo */
+.show {
+    display: block;
+}
+
+footer {
+    margin-top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: black;
+    background-color: #ffeb3b;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+footer a {
+    font-size: 30px;
+    margin: 5px;
+}
+
+footer p {
+    font-size: 15px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 2rem;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+
+    footer a {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar-brand {
+        font-size: 1.8rem;
+    }
+
+    footer {
+        font-size: 13px;
+    }
+
+    footer a {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+
+    footer {
+        font-size: 12px;
+    }
+
+    footer a {
+        font-size: 20px;
+    }
+}
