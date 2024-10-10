@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HobbiesHub_API_REST.Migrations
 {
     [DbContext(typeof(HobbiesHubSystemDbContext))]
-    [Migration("20240919131801_InitialDB02")]
-    partial class InitialDB02
+    [Migration("20241007230521_InitialDB")]
+    partial class InitialDB
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

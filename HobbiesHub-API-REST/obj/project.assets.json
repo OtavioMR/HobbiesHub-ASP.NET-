@@ -2435,19 +2435,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Proatec\\.nuget\\packages\\": {}
+    "C:\\Users\\otavv\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Proatec\\Desktop\\HobbiesHub-ASP.NET-\\HobbiesHub-API-REST\\HobbiesHub-API-REST.csproj",
+      "projectUniqueName": "C:\\Users\\otavv\\Desktop\\HobbiesHub-ASP.NET-\\HobbiesHub-API-REST\\HobbiesHub-API-REST.csproj",
       "projectName": "HobbiesHub-API-REST",
-      "projectPath": "C:\\Users\\Proatec\\Desktop\\HobbiesHub-ASP.NET-\\HobbiesHub-API-REST\\HobbiesHub-API-REST.csproj",
-      "packagesPath": "C:\\Users\\Proatec\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Proatec\\Desktop\\HobbiesHub-ASP.NET-\\HobbiesHub-API-REST\\obj\\",
+      "projectPath": "C:\\Users\\otavv\\Desktop\\HobbiesHub-ASP.NET-\\HobbiesHub-API-REST\\HobbiesHub-API-REST.csproj",
+      "packagesPath": "C:\\Users\\otavv\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\otavv\\Desktop\\HobbiesHub-ASP.NET-\\HobbiesHub-API-REST\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Proatec\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\otavv\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2523,7 +2523,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

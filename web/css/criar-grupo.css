@@ -5,19 +5,20 @@
 
 body {
     min-height: 100vh;
-    background: linear-gradient(to bottom, #4f1fe2, #4a148C, #340a68);
     margin: 0;
     padding: 0;
     color: #333;
     font-family: 'Roboto', sans-serif;
-    display: flex;
-    flex-direction: column;
-    padding-top: 80px; /* Altura do navbar fixo */
+    background: linear-gradient(to bottom, #4f1fe2, #4a148C, #340a68);
 }
 
 .navbar {
-    background-color: #ffeb3b !important; /* Cor do background do navbar */
+    background-color: #ffeb3b !important;
     color: black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Garantir que o navbar fique sobre outros elementos */
 }
 
 .navbar-brand {
@@ -37,6 +38,27 @@ h1 {
     text-align: center;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 80px); /* Subtrai a altura do footer se necessário */
+}
+
+.titulo-grupo {
+    margin-top: 15%;
+    width: 40rem;
+    height: 5;
+}
+
+.titulo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
 #group-form {
     background-color: #FFD700;
     padding: 20px;
@@ -46,11 +68,13 @@ h1 {
     flex-direction: column;
     gap: 15px;
     width: 80%;
-    max-width: 400px;
+    max-width: 600px;
+    min-width: 300px;
     margin: 20px auto;
 }
 
-input[type="text"], input[type="number"] {
+input[type="text"],
+input[type="number"] {
     padding: 10px;
     border-radius: 5px;
     border: none;
@@ -81,6 +105,11 @@ button {
     color: #FFD700;
 }
 
+.btn-cancel:hover,
+.btn-confirm:hover {
+    opacity: 0.9;
+}
+
 /* Estilos para o botão do dropdown */
 .dropdown-btn {
     cursor: pointer;
@@ -89,13 +118,13 @@ button {
 
 /* Dropdown escondido por padrão */
 .dropdown-content {
-    display: none; /* Mantém o dropdown oculto por padrão */
-    position: absolute; /* Para garantir que ele seja posicionado em relação ao pai */
-    right: 0; /* Alinha o dropdown ao lado direito */
-    margin-top: 2.rem;
+    display: none;
+    position: absolute;
+    right: 0;
+    margin-top: 8.5%;
     background-color: #f9f9f9;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
     border-radius: 5px;
 }
@@ -103,7 +132,7 @@ button {
 /* Estilo das opções dentro do dropdown */
 .dropdown-content a {
     color: black;
-    padding: 12px 16px;
+    padding: 12px 20px; /* Ajuste para espaçamento horizontal */
     text-decoration: none;
     display: block;
     border-bottom: 1px solid #ddd;
@@ -126,8 +155,7 @@ footer {
     color: black;
     background-color: #ffeb3b;
     text-align: center;
-    z-index: 1000;
-    padding: 1rem;
+    padding: 0.5rem;
 }
 
 footer a {
@@ -151,6 +179,20 @@ footer p {
 
     footer a {
         font-size: 24px;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar-brand {
+        font-size: 1.8rem;
+    }
+
+    footer {
+        font-size: 13px;
+    }
+
+    footer a {
+        font-size: 22px;
     }
 }
 
