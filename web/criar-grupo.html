@@ -23,17 +23,11 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Sobre</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Sobre</a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Mais
-                        </a>
+                            aria-expanded="false">Mais</a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">Ação</a></li>
                             <li><a class="dropdown-item" href="#">Outra ação</a></li>
@@ -43,9 +37,7 @@
                             <li><a class="dropdown-item" href="#">Algo mais aqui</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" aria-disabled="true">Desativado</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link disabled" aria-disabled="true">Desativado</a></li>
                 </ul>
                 <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
@@ -55,32 +47,41 @@
         </div>
     </nav>
 
-
-
-
     <main>
-        <h1>Criar grupo</h1>
+        <div class="titulo">
+            <div class="titulo-categoria">
+                <h1 class="titulo-grupo">Criar grupo</h1>
+            </div>
+        </div>
+
         <form id="group-form">
             <label for="group-name">Nome do grupo</label>
-            <input type="text" id="group-name" placeholder="Digite o nome do grupo" required>
+            <input type="text" id="group-name" class="form-control" placeholder="Insira o nome do grupo" required>
 
             <label for="category">Categoria</label>
-            <input type="text" id="category" placeholder=" a categoria" required>
+            <div class="input-group mb-3 position-relative">
+                <input type="text" id="category" class="form-control" placeholder="Selecione categoria" required
+                    readonly>
+                <button type="button" class="dropdown-btn btn btn-outline-secondary btn-sm" id="dropdownBtn">▼</button>
+                <div class="dropdown-content" id="dropdownContent">
+                    <a href="#"></a>
+                    <a href="#">Esporte</a>
+                    <a href="#">Dança</a>
+                    <a href="#">Música</a>
+                    <a href="#">Coleção</a>
+                </div>
+            </div>
+
 
             <label for="max-people">Quantidade máxima de pessoas</label>
-            <input type="number" id="max-people" placeholder="Digite a quantidade" required>
+            <input type="number" id="max-people" class="form-control" placeholder="Insira a quantidade de" required>
 
             <div class="form-buttons">
-                <button type="reset" class="btn-cancel">Cancelar</button>
-                <button type="submit" class="btn-confirm">Confirmar</button>
+                <button type="reset" class="btn btn-danger">Cancelar</button>
+                <button type="submit" class="btn btn-success">Confirmar</button>
             </div>
         </form>
     </main>
-
-
-
-
-
 
     <footer>
         <p>Siga a gente nas redes sociais</p>
@@ -89,7 +90,7 @@
         <a href="#"><i class="fab fa-tiktok"></i></a>
     </footer>
 
-    <script src="./script/teste.js"></script>
+    <script src="./script/criar-grupo.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
         integrity="sha384-oBqDVmMz4fnFO9dOzzE3N8gPzF4s0s3TOcT6Nw5I+K98A1D/jgM4Y1Jp8EJZEx0d"
         crossorigin="anonymous"></script>
