@@ -1,5 +1,124 @@
 [
   {
+    "ContainingType": "HobbiesHub_API_REST.Controllers.GrupoController",
+    "Method": "AddGrupo",
+    "RelativePath": "api/Grupo",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "grupo",
+        "Type": "HobbiesHub_API_REST.Models.GrupoModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HobbiesHub_API_REST.Models.GrupoModel",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HobbiesHub_API_REST.Controllers.GrupoController",
+    "Method": "GetAllGrupos",
+    "RelativePath": "api/Grupo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[HobbiesHub_API_REST.Models.GrupoModel, HobbiesHub-API-REST, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HobbiesHub_API_REST.Controllers.GrupoController",
+    "Method": "GetGrupoById",
+    "RelativePath": "api/Grupo/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HobbiesHub_API_REST.Models.GrupoModel",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HobbiesHub_API_REST.Controllers.GrupoController",
+    "Method": "UpdateGrupo",
+    "RelativePath": "api/Grupo/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "grupo",
+        "Type": "HobbiesHub_API_REST.Models.GrupoModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HobbiesHub_API_REST.Models.GrupoModel",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HobbiesHub_API_REST.Controllers.GrupoController",
+    "Method": "DeleteGrupo",
+    "RelativePath": "api/Grupo/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "HobbiesHub_API_REST.Controllers.UsuarioController",
     "Method": "AddUsuario",
     "RelativePath": "api/Usuario",
