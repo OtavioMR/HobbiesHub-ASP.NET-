@@ -196,3 +196,5 @@ C:\Users\otavv\Desktop\HobbiesHub-ASP.NET-\HobbiesHub-API-REST\obj\Debug\net6.0\
 C:\Users\otavv\Desktop\HobbiesHub-ASP.NET-\HobbiesHub-API-REST\obj\Debug\net6.0\HobbiesHub-API-REST.pdb
 C:\Users\otavv\Desktop\HobbiesHub-ASP.NET-\HobbiesHub-API-REST\obj\Debug\net6.0\HobbiesHub-API-REST.genruntimeconfig.cache
 C:\Users\otavv\Desktop\HobbiesHub-ASP.NET-\HobbiesHub-API-REST\obj\Debug\net6.0\ref\HobbiesHub-API-REST.dll
+C:\Users\otavv\Desktop\HobbiesHub-ASP.NET-\HobbiesHub-API-REST\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\otavv\Desktop\HobbiesHub-ASP.NET-\HobbiesHub-API-REST\bin\Debug\net6.0\System.Net.WebSockets.WebSocketProtocol.dll

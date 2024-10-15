@@ -21,6 +21,7 @@ public class Program
 
         // Registro do repositório
         builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
+        builder.Services.AddScoped<IGrupoRepository, GrupoRepository>();
 
         // Add services to the container.
         builder.Services.AddCors(options =>

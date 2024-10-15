@@ -14,10 +14,13 @@ public class HobbiesHubSystemDbContext : DbContext
     }
 
     public DbSet<UsuarioModel> Usuarios { get; set; }
+    public DbSet<GrupoModel> Grupos { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.ApplyConfiguration(new UsuarioMap());
+        modelBuilder.ApplyConfiguration(new UsuarioMap()); // Mapeamento do usuário
+        modelBuilder.ApplyConfiguration(new GrupoMap());   // Mapeamento do grupo
         base.OnModelCreating(modelBuilder);
     }
+
 }
