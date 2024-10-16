@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HobbiesHub-API-REST")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e1ea7cbbaf0d8fda9175212f98c24e41a8ed752a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+de9b7a7e7e674b2504c648a57a0533b55c5aecab")]
 [assembly: System.Reflection.AssemblyProductAttribute("HobbiesHub-API-REST")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HobbiesHub-API-REST")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
