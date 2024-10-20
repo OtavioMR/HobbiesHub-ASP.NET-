@@ -41,9 +41,6 @@ header {
     color: #6c757d !important;
 }
 
-.navbar-toggler-icon {
-    background-image: url('data:image/svg+xml;base64,...') ;/* Imagem do ícone do menu */
-}
 
 .form-control {
     border-radius: 50px;
