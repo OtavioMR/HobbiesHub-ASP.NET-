@@ -5,9 +5,10 @@
         public int Id { get; set; }
         public string UsuarioName { get; set; }
         public string UsuarioEmail { get; set; }
-        public string UsuarioNameSystem { get; set; }  
+        public string UsuarioNameSystem { get; set; }
         public string UsuarioSenhaHash { get; set; }
         public int UsuarioAge { get; set; }
-        public int UsuarioDateCadastro { get; set; }
+        public DateTime UsuarioDateCadastro { get; set; }  // Corrigir aqui
     }
+
 }
