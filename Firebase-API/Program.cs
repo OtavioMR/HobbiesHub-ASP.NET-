@@ -1,5 +1,7 @@
 using Firebase_API.Data;
 using Firebase_API.Models;
+using Firebase_API.Repositories;
+using Firebase_API.Repositories.Interfaces;
 
 namespace Firebase_API
 {
@@ -9,30 +11,26 @@ namespace Firebase_API
         {
             var builder = WebApplication.CreateBuilder(args);
 
-
-
-
-
-
             // Adicionar configuração do Firebase
             builder.Services.AddSingleton<FirebaseContext>(provider =>
-                new FirebaseContext("https://portifolio-api-rest-default-rtdb.firebaseio.com/"));
+                new FirebaseContext("https://hobbieshub-api-default-rtdb.firebaseio.com/"));
 
+            // Registrar o FirebaseClient para ser usado pelos repositórios
+            builder.Services.AddSingleton(provider =>
+                provider.GetRequiredService<FirebaseContext>().Client);
 
-
-
-
+            // Registrar o repositório de usuários e outras dependências
+            builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 
             // Add services to the container.
-
             builder.Services.AddControllers();
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+            // Configuração do Swagger/OpenAPI
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
             var app = builder.Build();
 
-            // Configure the HTTP request pipeline.
+            // Configure o pipeline de requisição HTTP.
             if (app.Environment.IsDevelopment())
             {
                 app.UseSwagger();
@@ -40,12 +38,8 @@ namespace Firebase_API
             }
 
             app.UseHttpsRedirection();
-
             app.UseAuthorization();
-
-
             app.MapControllers();
-
             app.Run();
         }
     }
