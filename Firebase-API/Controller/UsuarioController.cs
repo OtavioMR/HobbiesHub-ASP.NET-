@@ -43,9 +43,19 @@ namespace Firebase_API.Controllers
         [HttpPost]
         public async Task<ActionResult<UsuarioModel>> CreateUsuario(UsuarioModel usuario)
         {
+            // Garantir que a data de nascimento tenha apenas a parte da data
+            if (usuario.DateOfBirth != null)
+            {
+                usuario.DateOfBirth = usuario.DateOfBirth.Date; // Remove a hora
+            }
+
+            // Adiciona o usuário ao Firebase, sem a necessidade de fornecer o 'Id'
             var createdUsuario = await _usuarioRepository.AddUsuario(usuario);
+
+            // A API retorna o 'Id' gerado automaticamente pelo Firebase
             return CreatedAtAction(nameof(GetUsuario), new { id = createdUsuario.Id }, createdUsuario);
         }
+
 
         // Método para atualizar um usuário existente
         [HttpPut("{id}")]

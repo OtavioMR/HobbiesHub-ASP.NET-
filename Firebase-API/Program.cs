@@ -22,6 +22,17 @@ namespace Firebase_API
             // Registrar o repositório de usuários e outras dependências
             builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 
+            // Adicionar configurações de CORS
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAll", builder =>
+                {
+                    builder.AllowAnyOrigin()
+                           .AllowAnyMethod()
+                           .AllowAnyHeader();
+                });
+            });
+
             // Add services to the container.
             builder.Services.AddControllers();
             // Configuração do Swagger/OpenAPI
@@ -39,6 +50,10 @@ namespace Firebase_API
 
             app.UseHttpsRedirection();
             app.UseAuthorization();
+
+            // Aplicar a política de CORS
+            app.UseCors("AllowAll");
+
             app.MapControllers();
             app.Run();
         }

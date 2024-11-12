@@ -3,20 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seleção de Categorias</title>
-    <link rel="stylesheet" href="./css/teste.css">
+    <title>Cadastro de Usuários</title>
+    <style>
+        /* Seu CSS aqui */
+    </style>
 </head>
 <body>
-    <div class="dropdown">
-        <button class="dropdown-btn" id="dropdownBtn">Escolha uma categoria ▼</button>
-        <div class="dropdown-content" id="dropdownContent">
-            <a href="#">Categoria 1</a>
-            <a href="#">Categoria 2</a>
-            <a href="#">Categoria 3</a>
-            <a href="#">Categoria 4</a>
-        </div>
-    </div>
+    <form id="cadastroForm">
+        <input type="text" name="id" placeholder="ID" required>
+        <input type="text" name="nameUsuario" placeholder="Nome do Usuário" required>
+        <input type="text" name="nameSystemUsuario" placeholder="Nome do Sistema" required>
+        <input type="email" name="emailUsuario" placeholder="Email" required>
+        <input type="password" name="senhaUsuario" placeholder="Senha" required>
+        <input type="date" name="dateOfBirth" placeholder="Data de Nascimento" required>
+        <button type="submit">Cadastrar</button>
+    </form>
 
-    <script src="./script/teste.js"></script>
+    <script>
+        document.getElementById('cadastroForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+
+            
+            const formData = new FormData(event.target);
+            const data = {
+                id: formData.get('id'),
+                nameUsuario: formData.get('nameUsuario'),
+                nameSystemUsuario: formData.get('nameSystemUsuario'),
+                emailUsuario: formData.get('emailUsuario'),
+                senhaUsuario: formData.get('senhaUsuario'),
+                dateOfBirth: formData.get('dateOfBirth')
+            };
+
+            try {
+                const response = await fetch('https://localhost:44327/api/Usuario', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                if (response.ok) {
+                    console.log('Usuário cadastrado com sucesso!');
+                } else {
+                    console.error('Erro ao cadastrar usuário');
+                }
+            } catch (error) {
+                console.error('Erro ao cadastrar usuário:', error);
+            }
+        });
+    </script>
 </body>
 </html>

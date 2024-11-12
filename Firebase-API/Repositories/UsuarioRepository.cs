@@ -26,13 +26,23 @@ namespace Firebase_API.Repositories
                 throw new ArgumentNullException(nameof(usuario), "O objeto de usuário não pode ser nulo.");
             }
 
+            // Envia o usuário para o Firebase e recebe a chave gerada
             var result = await _firebaseClient
                 .Child("Usuarios")
                 .PostAsync(usuario);
 
+            // Atribui o Id gerado automaticamente
             usuario.Id = result.Key;
+
+            // Verifica se o Id foi realmente gerado
+            if (string.IsNullOrEmpty(usuario.Id))
+            {
+                throw new InvalidOperationException("Erro ao gerar o ID para o usuário.");
+            }
+
             return usuario;
         }
+
 
         // Método para listar todos os usuários
         public async Task<List<UsuarioModel>> GetAllUsuarios()

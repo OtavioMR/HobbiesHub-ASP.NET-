@@ -36,3 +36,7 @@ C:\Users\otavv\Desktop\HobbiesHub-ASP.NET-\Firebase-API\obj\Debug\net8.0\refint\
 C:\Users\otavv\Desktop\HobbiesHub-ASP.NET-\Firebase-API\obj\Debug\net8.0\Firebase-API.pdb
 C:\Users\otavv\Desktop\HobbiesHub-ASP.NET-\Firebase-API\obj\Debug\net8.0\Firebase-API.genruntimeconfig.cache
 C:\Users\otavv\Desktop\HobbiesHub-ASP.NET-\Firebase-API\obj\Debug\net8.0\ref\Firebase-API.dll
+C:\Users\otavv\Desktop\HobbiesHub-ASP.NET-\Firebase-API\bin\Debug\net8.0\EntityFramework.SqlServer.dll
+C:\Users\otavv\Desktop\HobbiesHub-ASP.NET-\Firebase-API\bin\Debug\net8.0\EntityFramework.dll
+C:\Users\otavv\Desktop\HobbiesHub-ASP.NET-\Firebase-API\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\otavv\Desktop\HobbiesHub-ASP.NET-\Firebase-API\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
