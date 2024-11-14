@@ -44,7 +44,7 @@ namespace Firebase_API.Repositories
         }
 
 
-        // Método para listar todos os usuários
+            
         public async Task<List<UsuarioModel>> GetAllUsuarios()
         {
             var usuarios = await _firebaseClient

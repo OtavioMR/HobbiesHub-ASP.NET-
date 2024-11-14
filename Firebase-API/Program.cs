@@ -22,6 +22,9 @@ namespace Firebase_API
             // Registrar o repositório de usuários e outras dependências
             builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 
+            // Registrar o repositório de hobbyes e outras dependências
+            builder.Services.AddScoped<IHobbyRepository, HobbyRepository>();
+
             // Adicionar configurações de CORS
             builder.Services.AddCors(options =>
             {

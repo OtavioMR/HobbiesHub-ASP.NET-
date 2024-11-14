@@ -3,39 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\otavv\\Desktop\\HobbiesHub-ASP.NET-\\Firebase-API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F4A76370-5756-4190-891F-2ECE3D2A1472}|Firebase-API.csproj|c:\\users\\otavv\\desktop\\hobbieshub-asp.net-\\firebase-api\\models\\usuariomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F4A76370-5756-4190-891F-2ECE3D2A1472}|Firebase-API.csproj|solutionrelative:models\\usuariomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F4A76370-5756-4190-891F-2ECE3D2A1472}|Firebase-API.csproj|c:\\users\\otavv\\desktop\\hobbieshub-asp.net-\\firebase-api\\controller\\hobbycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F4A76370-5756-4190-891F-2ECE3D2A1472}|Firebase-API.csproj|solutionrelative:controller\\hobbycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4A76370-5756-4190-891F-2ECE3D2A1472}|Firebase-API.csproj|c:\\users\\otavv\\desktop\\hobbieshub-asp.net-\\firebase-api\\models\\hobbymodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F4A76370-5756-4190-891F-2ECE3D2A1472}|Firebase-API.csproj|solutionrelative:models\\hobbymodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F4A76370-5756-4190-891F-2ECE3D2A1472}|Firebase-API.csproj|c:\\users\\otavv\\desktop\\hobbieshub-asp.net-\\firebase-api\\controller\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F4A76370-5756-4190-891F-2ECE3D2A1472}|Firebase-API.csproj|solutionrelative:controller\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F4A76370-5756-4190-891F-2ECE3D2A1472}|Firebase-API.csproj|c:\\users\\otavv\\desktop\\hobbieshub-asp.net-\\firebase-api\\repositories\\usuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F4A76370-5756-4190-891F-2ECE3D2A1472}|Firebase-API.csproj|solutionrelative:repositories\\usuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F4A76370-5756-4190-891F-2ECE3D2A1472}|Firebase-API.csproj|c:\\users\\otavv\\desktop\\hobbieshub-asp.net-\\firebase-api\\repositories\\interfaces\\ihobbyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F4A76370-5756-4190-891F-2ECE3D2A1472}|Firebase-API.csproj|solutionrelative:repositories\\interfaces\\ihobbyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F4A76370-5756-4190-891F-2ECE3D2A1472}|Firebase-API.csproj|c:\\users\\otavv\\desktop\\hobbieshub-asp.net-\\firebase-api\\repositories\\interfaces\\iusuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F4A76370-5756-4190-891F-2ECE3D2A1472}|Firebase-API.csproj|solutionrelative:repositories\\interfaces\\iusuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F4A76370-5756-4190-891F-2ECE3D2A1472}|Firebase-API.csproj|c:\\users\\otavv\\desktop\\hobbieshub-asp.net-\\firebase-api\\repositories\\hobbyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F4A76370-5756-4190-891F-2ECE3D2A1472}|Firebase-API.csproj|solutionrelative:repositories\\hobbyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4A76370-5756-4190-891F-2ECE3D2A1472}|Firebase-API.csproj|c:\\users\\otavv\\desktop\\hobbieshub-asp.net-\\firebase-api\\models\\usuariomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F4A76370-5756-4190-891F-2ECE3D2A1472}|Firebase-API.csproj|solutionrelative:models\\usuariomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F4A76370-5756-4190-891F-2ECE3D2A1472}|Firebase-API.csproj|c:\\users\\otavv\\desktop\\hobbieshub-asp.net-\\firebase-api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F4A76370-5756-4190-891F-2ECE3D2A1472}|Firebase-API.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{F4A76370-5756-4190-891F-2ECE3D2A1472}|Firebase-API.csproj|c:\\users\\otavv\\desktop\\hobbieshub-asp.net-\\firebase-api\\repositories\\interfaces\\iusuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F4A76370-5756-4190-891F-2ECE3D2A1472}|Firebase-API.csproj|solutionrelative:repositories\\interfaces\\iusuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F4A76370-5756-4190-891F-2ECE3D2A1472}|Firebase-API.csproj|c:\\users\\otavv\\desktop\\hobbieshub-asp.net-\\firebase-api\\repositories\\gruporepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F4A76370-5756-4190-891F-2ECE3D2A1472}|Firebase-API.csproj|solutionrelative:repositories\\gruporepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F4A76370-5756-4190-891F-2ECE3D2A1472}|Firebase-API.csproj|c:\\users\\otavv\\desktop\\hobbieshub-asp.net-\\firebase-api\\controller\\grupocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F4A76370-5756-4190-891F-2ECE3D2A1472}|Firebase-API.csproj|solutionrelative:controller\\grupocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F4A76370-5756-4190-891F-2ECE3D2A1472}|Firebase-API.csproj|c:\\users\\otavv\\desktop\\hobbieshub-asp.net-\\firebase-api\\repositories\\interfaces\\igruporepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F4A76370-5756-4190-891F-2ECE3D2A1472}|Firebase-API.csproj|solutionrelative:repositories\\interfaces\\igruporepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F4A76370-5756-4190-891F-2ECE3D2A1472}|Firebase-API.csproj|c:\\users\\otavv\\desktop\\hobbieshub-asp.net-\\firebase-api\\data\\firebasecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F4A76370-5756-4190-891F-2ECE3D2A1472}|Firebase-API.csproj|solutionrelative:data\\firebasecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\otavv\\Desktop\\OtavioMR\\API_REST\\Controllers\\SkillController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -45,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,118 +71,144 @@
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "GrupoController.cs",
-              "DocumentMoniker": "C:\\Users\\otavv\\Desktop\\HobbiesHub-ASP.NET-\\Firebase-API\\Controller\\GrupoController.cs",
-              "RelativeDocumentMoniker": "Controller\\GrupoController.cs",
-              "ToolTip": "C:\\Users\\otavv\\Desktop\\HobbiesHub-ASP.NET-\\Firebase-API\\Controller\\GrupoController.cs",
-              "RelativeToolTip": "Controller\\GrupoController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T19:54:53.006Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\otavv\\Desktop\\HobbiesHub-ASP.NET-\\Firebase-API\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\otavv\\Desktop\\HobbiesHub-ASP.NET-\\Firebase-API\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAAAmwD0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwBgAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T18:23:40.05Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UsuarioController.cs",
-              "DocumentMoniker": "C:\\Users\\otavv\\Desktop\\HobbiesHub-ASP.NET-\\Firebase-API\\Controller\\UsuarioController.cs",
-              "RelativeDocumentMoniker": "Controller\\UsuarioController.cs",
-              "ToolTip": "C:\\Users\\otavv\\Desktop\\HobbiesHub-ASP.NET-\\Firebase-API\\Controller\\UsuarioController.cs",
-              "RelativeToolTip": "Controller\\UsuarioController.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAA3wDkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T19:10:08.481Z",
+              "WhenOpened": "2024-11-14T00:12:34.349Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "UsuarioModel.cs",
-              "DocumentMoniker": "C:\\Users\\otavv\\Desktop\\HobbiesHub-ASP.NET-\\Firebase-API\\Models\\UsuarioModel.cs",
-              "RelativeDocumentMoniker": "Models\\UsuarioModel.cs",
-              "ToolTip": "C:\\Users\\otavv\\Desktop\\HobbiesHub-ASP.NET-\\Firebase-API\\Models\\UsuarioModel.cs",
-              "RelativeToolTip": "Models\\UsuarioModel.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAA/wAYAAAAWAAAAAAAAAA==",
+              "Title": "HobbyController.cs",
+              "DocumentMoniker": "C:\\Users\\otavv\\Desktop\\HobbiesHub-ASP.NET-\\Firebase-API\\Controller\\HobbyController.cs",
+              "RelativeDocumentMoniker": "Controller\\HobbyController.cs",
+              "ToolTip": "C:\\Users\\otavv\\Desktop\\HobbiesHub-ASP.NET-\\Firebase-API\\Controller\\HobbyController.cs",
+              "RelativeToolTip": "Controller\\HobbyController.cs",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAswFMAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T17:55:43.015Z",
+              "WhenOpened": "2024-11-13T23:41:55.922Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "UsuarioRepository.cs",
-              "DocumentMoniker": "C:\\Users\\otavv\\Desktop\\HobbiesHub-ASP.NET-\\Firebase-API\\Repositories\\UsuarioRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\UsuarioRepository.cs",
-              "ToolTip": "C:\\Users\\otavv\\Desktop\\HobbiesHub-ASP.NET-\\Firebase-API\\Repositories\\UsuarioRepository.cs",
-              "RelativeToolTip": "Repositories\\UsuarioRepository.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAmwCwAAAAAAAAAAAAAAA==",
+              "Title": "UsuarioController.cs",
+              "DocumentMoniker": "C:\\Users\\otavv\\Desktop\\HobbiesHub-ASP.NET-\\Firebase-API\\Controller\\UsuarioController.cs",
+              "RelativeDocumentMoniker": "Controller\\UsuarioController.cs",
+              "ToolTip": "C:\\Users\\otavv\\Desktop\\HobbiesHub-ASP.NET-\\Firebase-API\\Controller\\UsuarioController.cs",
+              "RelativeToolTip": "Controller\\UsuarioController.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAkwE0AAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T18:40:17.304Z",
+              "WhenOpened": "2024-11-13T21:51:08.234Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HobbyModel.cs",
+              "DocumentMoniker": "C:\\Users\\otavv\\Desktop\\HobbiesHub-ASP.NET-\\Firebase-API\\Models\\HobbyModel.cs",
+              "RelativeDocumentMoniker": "Models\\HobbyModel.cs",
+              "ToolTip": "C:\\Users\\otavv\\Desktop\\HobbiesHub-ASP.NET-\\Firebase-API\\Models\\HobbyModel.cs",
+              "RelativeToolTip": "Models\\HobbyModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T21:32:59.035Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "GrupoRepository.cs",
-              "DocumentMoniker": "C:\\Users\\otavv\\Desktop\\HobbiesHub-ASP.NET-\\Firebase-API\\Repositories\\GrupoRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\GrupoRepository.cs",
-              "ToolTip": "C:\\Users\\otavv\\Desktop\\HobbiesHub-ASP.NET-\\Firebase-API\\Repositories\\GrupoRepository.cs",
-              "RelativeToolTip": "Repositories\\GrupoRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAABuAAAAAAAAAA==",
+              "Title": "UsuarioModel.cs",
+              "DocumentMoniker": "C:\\Users\\otavv\\Desktop\\HobbiesHub-ASP.NET-\\Firebase-API\\Models\\UsuarioModel.cs",
+              "RelativeDocumentMoniker": "Models\\UsuarioModel.cs",
+              "ToolTip": "C:\\Users\\otavv\\Desktop\\HobbiesHub-ASP.NET-\\Firebase-API\\Models\\UsuarioModel.cs",
+              "RelativeToolTip": "Models\\UsuarioModel.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAA3wAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T20:06:03.193Z",
+              "WhenOpened": "2024-11-13T21:33:23.847Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "HobbyRepository.cs",
+              "DocumentMoniker": "C:\\Users\\otavv\\Desktop\\HobbiesHub-ASP.NET-\\Firebase-API\\Repositories\\HobbyRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\HobbyRepository.cs",
+              "ToolTip": "C:\\Users\\otavv\\Desktop\\HobbiesHub-ASP.NET-\\Firebase-API\\Repositories\\HobbyRepository.cs",
+              "RelativeToolTip": "Repositories\\HobbyRepository.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAYwHkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T21:52:42.801Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "IUsuarioRepository.cs",
-              "DocumentMoniker": "C:\\Users\\otavv\\Desktop\\HobbiesHub-ASP.NET-\\Firebase-API\\Repositories\\Interfaces\\IUsuarioRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\Interfaces\\IUsuarioRepository.cs",
-              "ToolTip": "C:\\Users\\otavv\\Desktop\\HobbiesHub-ASP.NET-\\Firebase-API\\Repositories\\Interfaces\\IUsuarioRepository.cs",
-              "RelativeToolTip": "Repositories\\Interfaces\\IUsuarioRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAsAAAAAAAAAA==",
+              "Title": "IHobbyRepository.cs",
+              "DocumentMoniker": "C:\\Users\\otavv\\Desktop\\HobbiesHub-ASP.NET-\\Firebase-API\\Repositories\\Interfaces\\IHobbyRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Interfaces\\IHobbyRepository.cs",
+              "ToolTip": "C:\\Users\\otavv\\Desktop\\HobbiesHub-ASP.NET-\\Firebase-API\\Repositories\\Interfaces\\IHobbyRepository.cs",
+              "RelativeToolTip": "Repositories\\Interfaces\\IHobbyRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T18:33:51.343Z",
+              "WhenOpened": "2024-11-13T21:47:16.589Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "FirebaseContext.cs",
-              "DocumentMoniker": "C:\\Users\\otavv\\Desktop\\HobbiesHub-ASP.NET-\\Firebase-API\\Data\\FirebaseContext.cs",
-              "RelativeDocumentMoniker": "Data\\FirebaseContext.cs",
-              "ToolTip": "C:\\Users\\otavv\\Desktop\\HobbiesHub-ASP.NET-\\Firebase-API\\Data\\FirebaseContext.cs",
-              "RelativeToolTip": "Data\\FirebaseContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAlAAAAAAAAAA==",
+              "Title": "IUsuarioRepository.cs",
+              "DocumentMoniker": "C:\\Users\\otavv\\Desktop\\HobbiesHub-ASP.NET-\\Firebase-API\\Repositories\\Interfaces\\IUsuarioRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Interfaces\\IUsuarioRepository.cs",
+              "ToolTip": "C:\\Users\\otavv\\Desktop\\HobbiesHub-ASP.NET-\\Firebase-API\\Repositories\\Interfaces\\IUsuarioRepository.cs",
+              "RelativeToolTip": "Repositories\\Interfaces\\IUsuarioRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T18:13:45.267Z",
+              "WhenOpened": "2024-11-13T21:47:19.465Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "SkillController.cs",
-              "DocumentMoniker": "C:\\Users\\otavv\\Desktop\\OtavioMR\\API_REST\\Controllers\\SkillController.cs",
-              "RelativeDocumentMoniker": "..\\..\\OtavioMR\\API_REST\\Controllers\\SkillController.cs",
-              "ToolTip": "C:\\Users\\otavv\\Desktop\\OtavioMR\\API_REST\\Controllers\\SkillController.cs",
-              "RelativeToolTip": "..\\..\\OtavioMR\\API_REST\\Controllers\\SkillController.cs",
-              "ViewState": "AgIAAD0AAAAAAAAAAAAwwE0AAAAAAAAAAAAAAA==",
+              "Title": "GrupoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\otavv\\Desktop\\HobbiesHub-ASP.NET-\\Firebase-API\\Repositories\\GrupoRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\GrupoRepository.cs",
+              "ToolTip": "C:\\Users\\otavv\\Desktop\\HobbiesHub-ASP.NET-\\Firebase-API\\Repositories\\GrupoRepository.cs",
+              "RelativeToolTip": "Repositories\\GrupoRepository.cs",
+              "ViewState": "AgIAAF8AAAAAAAAAAAAswAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T19:14:27.289Z",
+              "WhenOpened": "2024-11-13T21:55:16.042Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IGrupoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\otavv\\Desktop\\HobbiesHub-ASP.NET-\\Firebase-API\\Repositories\\Interfaces\\IGrupoRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Interfaces\\IGrupoRepository.cs",
+              "ToolTip": "C:\\Users\\otavv\\Desktop\\HobbiesHub-ASP.NET-\\Firebase-API\\Repositories\\Interfaces\\IGrupoRepository.cs",
+              "RelativeToolTip": "Repositories\\Interfaces\\IGrupoRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T23:33:47.699Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "FirebaseContext.cs",
+              "DocumentMoniker": "C:\\Users\\otavv\\Desktop\\HobbiesHub-ASP.NET-\\Firebase-API\\Data\\FirebaseContext.cs",
+              "RelativeDocumentMoniker": "Data\\FirebaseContext.cs",
+              "ToolTip": "C:\\Users\\otavv\\Desktop\\HobbiesHub-ASP.NET-\\Firebase-API\\Data\\FirebaseContext.cs",
+              "RelativeToolTip": "Data\\FirebaseContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T21:50:58.902Z",
               "EditorCaption": ""
             }
           ]
