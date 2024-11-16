@@ -1,57 +1,34 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Usuários</title>
-    <style>
-        /* Seu CSS aqui */
-    </style>
+    <title>Chat</title>
 </head>
 <body>
-    <form id="cadastroForm">
-        <input type="text" name="id" placeholder="ID" required>
-        <input type="text" name="nameUsuario" placeholder="Nome do Usuário" required>
-        <input type="text" name="nameSystemUsuario" placeholder="Nome do Sistema" required>
-        <input type="email" name="emailUsuario" placeholder="Email" required>
-        <input type="password" name="senhaUsuario" placeholder="Senha" required>
-        <input type="date" name="dateOfBirth" placeholder="Data de Nascimento" required>
-        <button type="submit">Cadastrar</button>
-    </form>
-
+    <div>
+        <input type="text" id="userInput" placeholder="Nome" />
+        <input type="text" id="messageInput" placeholder="Mensagem" />
+        <button onclick="sendMessage()">Enviar</button>
+    </div>
+    <ul id="messagesList"></ul>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/3.1.11/signalr.min.js"></script>
     <script>
-        document.getElementById('cadastroForm').addEventListener('submit', async function(event) {
-            event.preventDefault();
+        const connection = new signalR.HubConnectionBuilder()
+            .withUrl("/chatHub")
+            .build();
 
-            
-            const formData = new FormData(event.target);
-            const data = {
-                id: formData.get('id'),
-                nameUsuario: formData.get('nameUsuario'),
-                nameSystemUsuario: formData.get('nameSystemUsuario'),
-                emailUsuario: formData.get('emailUsuario'),
-                senhaUsuario: formData.get('senhaUsuario'),
-                dateOfBirth: formData.get('dateOfBirth')
-            };
-
-            try {
-                const response = await fetch('https://localhost:44327/api/Usuario', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(data)
-                });
-
-                if (response.ok) {
-                    console.log('Usuário cadastrado com sucesso!');
-                } else {
-                    console.error('Erro ao cadastrar usuário');
-                }
-            } catch (error) {
-                console.error('Erro ao cadastrar usuário:', error);
-            }
+        connection.on("ReceiveMessage", (user, message) => {
+            const li = document.createElement("li");
+            li.textContent = `${user}: ${message}`;
+            document.getElementById("messagesList").appendChild(li);
         });
+
+        connection.start().catch(err => console.error(err.toString()));
+
+        function sendMessage() {
+            const user = document.getElementById("userInput").value;
+            const message = document.getElementById("messageInput").value;
+            connection.invoke("SendMessage", user, message).catch(err => console.error(err.toString()));
+        }
     </script>
 </body>
 </html>

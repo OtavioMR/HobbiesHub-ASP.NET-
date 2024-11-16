@@ -1,9 +1,11 @@
 ﻿using Firebase_API.Models;
 using Firebase_API.Repositories.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Firebase_API.Controller
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class HobbyController : ControllerBase

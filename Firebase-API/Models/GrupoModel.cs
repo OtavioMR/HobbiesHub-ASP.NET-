@@ -2,32 +2,29 @@
 {
     public class GrupoModel
     {
-        public string Id {  get; set; }
+        public string Id { get; set; }
         public string NomeGrupo { get; set; }
         public string DescricaoGrupo { get; set; }
-        public string CategoriaGrupo { get; set; }
-        public List<UsuarioModel> Membros { get; set; }
+        public string HobbyId { get; set; }
+        public string AdministradorId { get; set; }
+        public List<string> Membros { get; set; }
 
         public GrupoModel()
         {
-            Membros = new List<UsuarioModel>();
+            Membros = new List<string>();
         }
 
-        // Construtor com parâmetros 
-        public GrupoModel(string nomeGrupo, string descricaoGrupo, string categoriaGrupo)
+        public void AdicionarMembro(string usuarioId)
         {
-            NomeGrupo = nomeGrupo;
-            DescricaoGrupo = descricaoGrupo;
-            CategoriaGrupo = categoriaGrupo;
-        }
-
-        // Método para adicionar um usuário ao grupo
-        public void AdicionarMembrio(UsuarioModel usuario)
-        {
-            if (!Membros.Contains(usuario))
+            if (!Membros.Contains(usuarioId))
             {
-                Membros.Add(usuario);
+                Membros.Add(usuarioId);
             }
+        }
+
+        public void RemoverMembro(string usuarioId)
+        {
+            Membros.Remove(usuarioId);
         }
     }
 }

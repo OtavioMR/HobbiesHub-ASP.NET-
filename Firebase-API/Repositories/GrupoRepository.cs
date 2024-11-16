@@ -1,7 +1,9 @@
-﻿using Firebase_API.Models;
-using Firebase_API.Repositories.Interfaces;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using Firebase.Database;
 using Firebase.Database.Query;
+using Firebase_API.Models;
+using Firebase_API.Repositories.Interfaces;
 
 namespace Firebase_API.Repositories
 {
@@ -14,15 +16,32 @@ namespace Firebase_API.Repositories
             _firebaseClient = firebaseClient;
         }
 
+        public async Task<List<GrupoModel>> GetAllGrupos()
+        {
+            var grupos = await _firebaseClient
+                .Child("Grupos")
+                .OnceAsync<GrupoModel>();
 
-        // Método para criar um novo grupo
+            var result = new List<GrupoModel>();
+            foreach (var grupo in grupos)
+            {
+                result.Add(grupo.Object);
+            }
+            return result;
+        }
+
+        public async Task<GrupoModel> GetGrupoById(string id)
+        {
+            var grupo = await _firebaseClient
+                .Child("Grupos")
+                .Child(id)
+                .OnceSingleAsync<GrupoModel>();
+
+            return grupo;
+        }
+
         public async Task<GrupoModel> AddGrupo(GrupoModel grupo)
         {
-            if (grupo == null)
-            {
-                throw new ArgumentNullException(nameof(grupo), "O objeto de grupo não pode ser nulo");
-            }
-
             var result = await _firebaseClient
                 .Child("Grupos")
                 .PostAsync(grupo);
@@ -31,83 +50,20 @@ namespace Firebase_API.Repositories
             return grupo;
         }
 
-
-        // Método para deletar um grupo por ID
-        public async Task<bool> DeleteGrupo(string id)
+        public async Task UpdateGrupo(GrupoModel grupo, string id)
         {
-            var existingGrupon = await GetGrupoById(id);
-
-            if (existingGrupon == null)
-            {
-                throw new KeyNotFoundException($"Grupo com o ID: {id} não foi encontrado no banco de dados,");
-            }
-
-            await _firebaseClient
-                .Child("grupos")
-                .Child(id)
-                .DeleteAsync();
-
-            return true;
-        }
-
-
-        // Método para listar todos os grupos
-        public async Task<List<GrupoModel>> GetAllGrupos()
-        {
-            var grupos = await _firebaseClient
-               .Child("Grupos")
-               .OnceAsync<GrupoModel>();
-
-            return grupos.Select(u => new GrupoModel
-            {
-                Id = u.Key,
-
-                NomeGrupo = u.Object.NomeGrupo,
-                DescricaoGrupo = u.Object.DescricaoGrupo,
-                CategoriaGrupo = u.Object.CategoriaGrupo,
-                // Adicione outros campos aqui, conforme necessário
-            }).ToList();
-        }
-
-
-        // Método para listar um grupo por ID
-        public async Task<GrupoModel> GetGrupoById(string id)
-        {
-            var grupo = await _firebaseClient
-                .Child("Grupos")
-                .Child(id)
-                .OnceSingleAsync<GrupoModel>();
-
-            if (grupo == null)
-            {
-                return null;
-            }
-
-            grupo.Id = id;
-            return grupo;
-        }
-
-        public async Task<GrupoModel> UpdateGrupo(GrupoModel grupo, string id)
-        {
-            if (grupo == null)
-            {
-                throw new ArgumentNullException(nameof(grupo), "O objeto de grupo não pode ser nulo.");
-            }
-
-            var existingGrupo = await GetGrupoById(id);
-
-            if (existingGrupo == null)
-            {
-                throw new KeyNotFoundException($"Grupo com ID: {id} não encontrado no Firebase.");
-            }
-
-            grupo.Id = id;
             await _firebaseClient
                 .Child("Grupos")
                 .Child(id)
                 .PutAsync(grupo);
+        }
 
-            return grupo;
+        public async Task DeleteGrupo(string id)
+        {
+            await _firebaseClient
+                .Child("Grupos")
+                .Child(id)
+                .DeleteAsync();
         }
     }
 }
