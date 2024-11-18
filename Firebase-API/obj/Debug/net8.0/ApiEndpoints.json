@@ -16,6 +16,32 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "YourNamespace.Controllers.ChatController",
+    "Method": "GetMessages",
+    "RelativePath": "api/Chat/GetMessages",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YourNamespace.Controllers.ChatController",
+    "Method": "SendMessage",
+    "RelativePath": "api/Chat/SendMessage",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "chatMessage",
+        "Type": "ChatMessage",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Firebase_API.Controllers.GrupoController",
     "Method": "GetGrupos",
     "RelativePath": "api/Grupo",

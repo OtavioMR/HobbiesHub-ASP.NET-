@@ -5,12 +5,16 @@ using System.Text;
 using Firebase_API.Data;
 using Firebase_API.Repositories.Interfaces;
 using Firebase_API.Repositories;
+using YourNamespace.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Adicionar configuração do Firebase
 builder.Services.AddSingleton<FirebaseContext>(provider =>
     new FirebaseContext("https://hobbieshub-api-default-rtdb.firebaseio.com/"));
+
+var firebaseConfig = builder.Configuration.GetSection("Firebase").Get<FirebaseConfig>();
+builder.Services.AddSingleton(new FirebaseService(firebaseConfig.BasePath));
 
 // Registrar o FirebaseClient para ser usado pelos repositórios
 builder.Services.AddSingleton(provider =>
@@ -70,6 +74,17 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// Configuração do CORS
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", builder =>
+    {
+        builder.AllowAnyOrigin()
+               .AllowAnyMethod()
+               .AllowAnyHeader();
+    });
+});
+
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
@@ -79,7 +94,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-app.UseAuthentication(); // Adicionar esta linha
+app.UseAuthentication();
 app.UseAuthorization();
 app.UseCors("AllowAll");
 
