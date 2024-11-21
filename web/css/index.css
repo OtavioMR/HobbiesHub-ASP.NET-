@@ -126,11 +126,6 @@ nav ul li a {
     transition: background-color 0.3s ease;
 }
 
-.coracao-logo-img:hover {
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
-}
-
 .livro-logo-img {
     display: flex;
     margin-top: -10rem;

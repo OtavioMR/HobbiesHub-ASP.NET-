@@ -77,11 +77,12 @@ builder.Services.AddSwaggerGen();
 // Configuração do CORS
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowAll", builder =>
+    options.AddPolicy("AllowSpecificOrigin", builder =>
     {
-        builder.AllowAnyOrigin()
+        builder.WithOrigins("http://127.0.0.1:5501", "http://localhost:5501")
                .AllowAnyMethod()
-               .AllowAnyHeader();
+               .AllowAnyHeader()
+               .AllowCredentials();
     });
 });
 
@@ -96,7 +97,7 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
-app.UseCors("AllowAll");
+app.UseCors("AllowSpecificOrigin");
 
 app.MapControllers();
 app.Run();

@@ -1,5 +1,15 @@
 [
   {
+    "ContainingType": "YourNamespace.Controllers.AccountController",
+    "Method": "IsLoggedIn",
+    "RelativePath": "api/Account/IsLoggedIn",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Firebase_API.Controllers.AuthController",
     "Method": "Login",
     "RelativePath": "api/Auth/login",
