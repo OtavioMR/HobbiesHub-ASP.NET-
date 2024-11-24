@@ -1,8 +1,7 @@
-﻿using Firebase_API.Models;
-using Firebase_API.Repositories.Interfaces;
-using Firebase.Database;
+﻿using Firebase.Database;
 using Firebase.Database.Query;
-using System;
+using Firebase_API.Models;
+using Firebase_API.Repositories.Interfaces;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -18,109 +17,75 @@ namespace Firebase_API.Repositories
             _firebaseClient = firebaseClient;
         }
 
-        // Método para adicionar um novo usuário
-        public async Task<UsuarioModel> AddUsuario(UsuarioModel usuario)
-        {
-            if (usuario == null)
-            {
-                throw new ArgumentNullException(nameof(usuario), "O objeto de usuário não pode ser nulo.");
-            }
-
-            // Envia o usuário para o Firebase e recebe a chave gerada
-            var result = await _firebaseClient
-                .Child("Usuarios")
-                .PostAsync(usuario);
-
-            // Atribui o Id gerado automaticamente
-            usuario.Id = result.Key;
-
-            // Verifica se o Id foi realmente gerado
-            if (string.IsNullOrEmpty(usuario.Id))
-            {
-                throw new InvalidOperationException("Erro ao gerar o ID para o usuário.");
-            }
-
-            return usuario;
-        }
-
-
-            
         public async Task<List<UsuarioModel>> GetAllUsuarios()
         {
-            var usuarios = await _firebaseClient
+            return (await _firebaseClient
                 .Child("Usuarios")
-                .OnceAsync<UsuarioModel>();
-
-            return usuarios.Select(u => new UsuarioModel
-            {
-                Id = u.Key,
-
-                NameUsuario = u.Object.NameUsuario,
-                NameSystemUsuario = u.Object.NameSystemUsuario,
-                EmailUsuario = u.Object.EmailUsuario,
-                SenhaUsuario = u.Object.SenhaUsuario,
-                DateOfBirth = u.Object.DateOfBirth,
-                // Adicione outros campos aqui, conforme necessário
-            }).ToList();
+                .OnceAsync<UsuarioModel>()).Select(u => new UsuarioModel
+                {
+                    Id = u.Key,
+                    NameUsuario = u.Object.NameUsuario,
+                    NameSystemUsuario = u.Object.NameSystemUsuario,
+                    EmailUsuario = u.Object.EmailUsuario,
+                    SenhaUsuario = u.Object.SenhaUsuario,
+                    DateOfBirth = u.Object.DateOfBirth
+                }).ToList();
         }
 
-        // Método para obter um usuário pelo ID
-        public async Task<UsuarioModel> GetUsuarioById(string id)
+        public async Task<UsuarioModel?> GetUsuarioById(string id)
         {
             var usuario = await _firebaseClient
                 .Child("Usuarios")
                 .Child(id)
                 .OnceSingleAsync<UsuarioModel>();
 
-            if (usuario == null)
+            if (usuario != null)
             {
-                return null;
+                usuario.Id = id;
             }
 
-            usuario.Id = id;
             return usuario;
         }
 
-        // Método para atualizar um usuário existente pelo ID
-        public async Task<UsuarioModel> UpdateUsuario(UsuarioModel usuario, string id)
+        public async Task<UsuarioModel?> GetUsuarioByEmailAndPassword(string email, string password)
         {
-            if (usuario == null)
+            var usuarios = await _firebaseClient
+                .Child("Usuarios")
+                .OnceAsync<UsuarioModel>();
+
+            var usuario = usuarios.FirstOrDefault(u => u.Object.EmailUsuario == email && u.Object.SenhaUsuario == password)?.Object;
+            if (usuario != null)
             {
-                throw new ArgumentNullException(nameof(usuario), "O objeto de usuário não pode ser nulo.");
+                usuario.Id = usuarios.FirstOrDefault(u => u.Object.EmailUsuario == email && u.Object.SenhaUsuario == password)?.Key;
             }
 
-            var existingUsuario = await GetUsuarioById(id);
+            return usuario;
+        }
 
-            if (existingUsuario == null)
-            {
-                throw new KeyNotFoundException($"Usuário com ID: {id} não encontrado no Firebase.");
-            }
+        public async Task<UsuarioModel> AddUsuario(UsuarioModel usuario)
+        {
+            var result = await _firebaseClient
+                .Child("Usuarios")
+                .PostAsync(usuario);
 
-            usuario.Id = id;
+            usuario.Id = result.Key;
+            return usuario;
+        }
+
+        public async Task UpdateUsuario(UsuarioModel usuario, string id)
+        {
             await _firebaseClient
                 .Child("Usuarios")
                 .Child(id)
                 .PutAsync(usuario);
-
-            return usuario;
         }
 
-        // Método para deletar um usuário pelo ID
-        public async Task<bool> DeleteUsuario(string id)
+        public async Task DeleteUsuario(string id)
         {
-            var existingUsuario = await GetUsuarioById(id);
-
-            if (existingUsuario == null)
-            {
-                throw new KeyNotFoundException($"Usuário com ID: {id} não encontrado no Firebase.");
-            }
-
             await _firebaseClient
                 .Child("Usuarios")
                 .Child(id)
                 .DeleteAsync();
-
-            return true;
         }
     }
 }

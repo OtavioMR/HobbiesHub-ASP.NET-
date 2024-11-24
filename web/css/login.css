@@ -5,10 +5,7 @@
 
 body {
     justify-content: space-between;
-    /* Ajuste para ocupar toda a tela */
     min-height: 100vh;
-    /* Garante que o body tenha pelo menos a altura da tela */
-    min-width: auto;
     background: linear-gradient(to bottom, #4f1fe2, #4a148C, #340a68);
     margin: 0;
     padding: 1rem;
@@ -17,6 +14,7 @@ body {
     display: flex;
     flex-direction: column;
     background-repeat: no-repeat;
+    padding-top: 80px; /* Ajuste o valor conforme a altura do header */
 }
 
 header {
@@ -30,8 +28,22 @@ header {
     background-color: #ffeb3b;
     color: black;
     padding: 1rem;
-    z-index: 1000;
+    z-index: 1000; /* Garanta que o header fique no topo */
 }
+
+.retangulo-amarelo {
+    margin-top: 5rem; /* Ajuste para garantir que o formulário não fique fora da tela */
+    border: 5px solid black;
+    width: 40rem;
+    height: 30rem;
+    background-color: yellow;
+    border-radius: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
 
 header h1 {
     font-family: Shrikhand-Regular, cursive;
@@ -87,19 +99,6 @@ nav ul li a {
 
 .search-form button:hover {
     background-color: #ffc107;
-}
-
-.retangulo-amarelo {
-    margin-top: -50rem;
-    border: 5px solid black;
-    width: 40rem;
-    height: 30rem;
-    background-color: yellow;
-    border-radius: 15%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
 }
 
 label {

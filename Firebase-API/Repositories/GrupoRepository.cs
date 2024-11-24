@@ -1,9 +1,10 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
-using Firebase.Database;
+﻿using Firebase.Database;
 using Firebase.Database.Query;
 using Firebase_API.Models;
 using Firebase_API.Repositories.Interfaces;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace Firebase_API.Repositories
 {
@@ -18,16 +19,15 @@ namespace Firebase_API.Repositories
 
         public async Task<List<GrupoModel>> GetAllGrupos()
         {
-            var grupos = await _firebaseClient
+            return (await _firebaseClient
                 .Child("Grupos")
-                .OnceAsync<GrupoModel>();
-
-            var result = new List<GrupoModel>();
-            foreach (var grupo in grupos)
-            {
-                result.Add(grupo.Object);
-            }
-            return result;
+                .OnceAsync<GrupoModel>()).Select(g => new GrupoModel
+                {
+                    Id = g.Key,
+                    NomeGrupo = g.Object.NomeGrupo,
+                    AdministradorId = g.Object.AdministradorId,
+                    Membros = g.Object.Membros
+                }).ToList();
         }
 
         public async Task<GrupoModel> GetGrupoById(string id)
@@ -37,6 +37,7 @@ namespace Firebase_API.Repositories
                 .Child(id)
                 .OnceSingleAsync<GrupoModel>();
 
+            grupo.Id = id;
             return grupo;
         }
 

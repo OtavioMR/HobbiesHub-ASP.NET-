@@ -1,18 +1,13 @@
-﻿namespace Firebase_API.Models
+﻿using System.Collections.Generic;
+
+namespace Firebase_API.Models
 {
     public class GrupoModel
     {
-        public string Id { get; set; }
-        public string NomeGrupo { get; set; }
-        public string DescricaoGrupo { get; set; }
-        public string HobbyId { get; set; }
-        public string AdministradorId { get; set; }
-        public List<string> Membros { get; set; }
-
-        public GrupoModel()
-        {
-            Membros = new List<string>();
-        }
+        public string Id { get; set; } = string.Empty; // Inicializar propriedades
+        public string NomeGrupo { get; set; } = string.Empty; // Inicializar propriedades
+        public string AdministradorId { get; set; } = string.Empty; // Inicializar propriedades
+        public List<string> Membros { get; set; } = new List<string>(); // Inicializar propriedades
 
         public void AdicionarMembro(string usuarioId)
         {
@@ -20,11 +15,6 @@
             {
                 Membros.Add(usuarioId);
             }
-        }
-
-        public void RemoverMembro(string usuarioId)
-        {
-            Membros.Remove(usuarioId);
         }
     }
 }

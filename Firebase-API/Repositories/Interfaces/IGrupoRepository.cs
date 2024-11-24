@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using Firebase_API.Models;
+using System.Collections.Generic;
 using System.Threading.Tasks;
-using Firebase_API.Models;
 
 namespace Firebase_API.Repositories.Interfaces
 {

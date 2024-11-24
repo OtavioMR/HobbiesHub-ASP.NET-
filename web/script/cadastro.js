@@ -1,33 +1,44 @@
-document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('formCadastro').addEventListener('submit', async function(event) {
-      event.preventDefault();
-      const formData = new FormData(event.target);
-      const data = {
-        nameUsuario: formData.get('usuarioName'),
-        nameSystemUsuario: formData.get('usuarioNameSystem'),
-        emailUsuario: formData.get('usuarioEmail'),
-        senhaUsuario: formData.get('usuarioSenha'),
-        dateOfBirth: formData.get('dateOfBirth')
-      };
-  
-      try {
-        const response = await fetch('https://localhost:44327/api/Usuario', {
+document.getElementById('formCadastro').addEventListener('submit', async (event) => {
+  event.preventDefault();
+
+  const usuarioName = document.getElementById('usuarioName').value;
+  const usuarioNameSystem = document.getElementById('usuarioNameSystem').value;
+  const usuarioEmail = document.getElementById('usuarioEmail').value;
+  const usuarioSenha = document.getElementById('usuarioSenha').value;
+  const usuarioSenhaConfirmar = document.getElementById('usuarioSenhaConfirmar').value;
+  const dateOfBirth = document.getElementById('dateOfBirth').value;
+
+  if (usuarioSenha !== usuarioSenhaConfirmar) {
+      alert('As senhas não coincidem. Por favor, verifique e tente novamente.');
+      return;
+  }
+
+  const usuario = {
+      NameUsuario: usuarioName,
+      NameSystemUsuario: usuarioNameSystem,
+      EmailUsuario: usuarioEmail,
+      SenhaUsuario: usuarioSenha,
+      DateOfBirth: dateOfBirth
+  };
+
+  try {
+      const response = await fetch('https://localhost:44327/api/Usuario/register', {
           method: 'POST',
           headers: {
-            'Content-Type': 'application/json'
+              'Content-Type': 'application/json'
           },
-          body: JSON.stringify(data)
-        });
-  
-        if (response.ok) {
-          console.log('Usuário cadastrado com sucesso!');
-        } else {
-          const errorMessage = await response.text();
-          console.log('Erro ao cadastrar usuário:', response.status, response.statusText, errorMessage);
-        }
-      } catch (error) {
-        console.log('Erro ao cadastrar usuário:', error);
+          body: JSON.stringify(usuario)
+      });
+
+      if (response.ok) {
+          alert('Cadastro realizado com sucesso!');
+          window.location.href = './login.html'; // Redireciona para a página de login após o cadastro bem-sucedido
+      } else {
+          const errorData = await response.json();
+          alert(`Erro ao cadastrar usuário: ${errorData.message}`);
       }
-    });
-  });
-  
+  } catch (error) {
+      console.error('Erro:', error);
+      alert('Ocorreu um erro ao tentar cadastrar o usuário.');
+  }
+});

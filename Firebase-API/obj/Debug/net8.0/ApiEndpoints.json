@@ -1,6 +1,6 @@
 [
   {
-    "ContainingType": "YourNamespace.Controllers.AccountController",
+    "ContainingType": "Firebase_API.Controllers.AccountController",
     "Method": "IsLoggedIn",
     "RelativePath": "api/Account/IsLoggedIn",
     "HttpMethod": "GET",
@@ -301,32 +301,6 @@
   },
   {
     "ContainingType": "Firebase_API.Controllers.UsuarioController",
-    "Method": "CreateUsuario",
-    "RelativePath": "api/Usuario",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "usuario",
-        "Type": "Firebase_API.Models.UsuarioModel",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "Firebase_API.Models.UsuarioModel",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "Firebase_API.Controllers.UsuarioController",
     "Method": "GetUsuario",
     "RelativePath": "api/Usuario/{id}",
     "HttpMethod": "GET",
@@ -353,39 +327,28 @@
   },
   {
     "ContainingType": "Firebase_API.Controllers.UsuarioController",
-    "Method": "UpdateUsuario",
-    "RelativePath": "api/Usuario/{id}",
-    "HttpMethod": "PUT",
+    "Method": "CreateUsuario",
+    "RelativePath": "api/Usuario/register",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.String",
-        "IsRequired": true
-      },
       {
         "Name": "usuario",
         "Type": "Firebase_API.Models.UsuarioModel",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Firebase_API.Controllers.UsuarioController",
-    "Method": "DeleteUsuario",
-    "RelativePath": "api/Usuario/{id}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
+    "ReturnTypes": [
       {
-        "Name": "id",
-        "Type": "System.String",
-        "IsRequired": true
+        "Type": "Firebase_API.Models.UsuarioModel",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
       }
-    ],
-    "ReturnTypes": []
+    ]
   }
 ]

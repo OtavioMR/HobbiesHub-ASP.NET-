@@ -2,30 +2,24 @@ using Microsoft.OpenApi.Models;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
-using Firebase_API.Data;
+using Firebase.Database;
 using Firebase_API.Repositories.Interfaces;
 using Firebase_API.Repositories;
-using YourNamespace.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Adicionar configuração do Firebase
-builder.Services.AddSingleton<FirebaseContext>(provider =>
-    new FirebaseContext("https://hobbieshub-api-default-rtdb.firebaseio.com/"));
-
-var firebaseConfig = builder.Configuration.GetSection("Firebase").Get<FirebaseConfig>();
-builder.Services.AddSingleton(new FirebaseService(firebaseConfig.BasePath));
-
-// Registrar o FirebaseClient para ser usado pelos repositórios
-builder.Services.AddSingleton(provider =>
-    provider.GetRequiredService<FirebaseContext>().Client);
-
-// Registrar os repositórios e outras dependências
-builder.Services.AddScoped<IHobbyRepository, HobbyRepository>();
-builder.Services.AddScoped<IGrupoRepository, GrupoRepository>();
+// Configuração do Firebase
+builder.Services.AddSingleton(provider => new FirebaseClient(builder.Configuration["Firebase:DatabaseURL"]));
 builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
+builder.Services.AddScoped<IGrupoRepository, GrupoRepository>();
 
 // Configuração de autenticação JWT
+var key = builder.Configuration["Jwt:Key"];
+if (string.IsNullOrEmpty(key))
+{
+    throw new ArgumentNullException(nameof(key), "Chave JWT não está configurada.");
+}
+
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
     {
@@ -35,9 +29,10 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             ValidateAudience = true,
             ValidateLifetime = true,
             ValidateIssuerSigningKey = true,
-            ValidIssuer = "yourIssuer",
-            ValidAudience = "yourAudience",
-            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("yourSuperSecretKeyWith32Chars1234567890"))
+            ValidIssuer = builder.Configuration["Jwt:Issuer"],
+            ValidAudience = builder.Configuration["Jwt:Audience"],
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(key)),
+            ClockSkew = TimeSpan.Zero // Reduz a margem de tempo para expiração
         };
     });
 
@@ -45,34 +40,32 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "Minha API", Version = "v1" });
-
-    // Definir o esquema de segurança Bearer Token
     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
         In = ParameterLocation.Header,
-        Description = "Por favor, insira o token",
+        Description = "Por favor, insira o token JWT no formato 'Bearer {token}'",
         Name = "Authorization",
         Type = SecuritySchemeType.ApiKey,
         Scheme = "Bearer"
     });
-
-    c.AddSecurityRequirement(new OpenApiSecurityRequirement {
+    c.AddSecurityRequirement(new OpenApiSecurityRequirement
     {
-        new OpenApiSecurityScheme
         {
-            Reference = new OpenApiReference
+            new OpenApiSecurityScheme
             {
-                Type = ReferenceType.SecurityScheme,
-                Id = "Bearer"
-            }
-        },
-        new string[] { }
-    }});
+                Reference = new OpenApiReference
+                {
+                    Type = ReferenceType.SecurityScheme,
+                    Id = "Bearer"
+                }
+            },
+            new string[] { }
+        }
+    });
 });
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
 
 // Configuração do CORS
 builder.Services.AddCors(options =>
@@ -95,9 +88,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseCors("AllowSpecificOrigin");
 app.UseAuthentication();
 app.UseAuthorization();
-app.UseCors("AllowSpecificOrigin");
 
 app.MapControllers();
 app.Run();
