@@ -19,20 +19,22 @@ namespace Firebase_API.Repositories
 
         public async Task<List<UsuarioModel>> GetAllUsuarios()
         {
-            return (await _firebaseClient
+            var usuarios = await _firebaseClient
                 .Child("Usuarios")
-                .OnceAsync<UsuarioModel>()).Select(u => new UsuarioModel
-                {
-                    Id = u.Key,
-                    NameUsuario = u.Object.NameUsuario,
-                    NameSystemUsuario = u.Object.NameSystemUsuario,
-                    EmailUsuario = u.Object.EmailUsuario,
-                    SenhaUsuario = u.Object.SenhaUsuario,
-                    DateOfBirth = u.Object.DateOfBirth
-                }).ToList();
+                .OnceAsync<UsuarioModel>();
+
+            return usuarios.Select(u => new UsuarioModel
+            {
+                Id = u.Key,
+                NameUsuario = u.Object.NameUsuario,
+                NameSystemUsuario = u.Object.NameSystemUsuario,
+                EmailUsuario = u.Object.EmailUsuario,
+                SenhaUsuario = u.Object.SenhaUsuario,
+                DateOfBirth = u.Object.DateOfBirth
+            }).ToList();
         }
 
-        public async Task<UsuarioModel?> GetUsuarioById(string id)
+        public async Task<UsuarioModel> GetUsuarioById(string id)
         {
             var usuario = await _firebaseClient
                 .Child("Usuarios")
@@ -42,21 +44,6 @@ namespace Firebase_API.Repositories
             if (usuario != null)
             {
                 usuario.Id = id;
-            }
-
-            return usuario;
-        }
-
-        public async Task<UsuarioModel?> GetUsuarioByEmailAndPassword(string email, string password)
-        {
-            var usuarios = await _firebaseClient
-                .Child("Usuarios")
-                .OnceAsync<UsuarioModel>();
-
-            var usuario = usuarios.FirstOrDefault(u => u.Object.EmailUsuario == email && u.Object.SenhaUsuario == password)?.Object;
-            if (usuario != null)
-            {
-                usuario.Id = usuarios.FirstOrDefault(u => u.Object.EmailUsuario == email && u.Object.SenhaUsuario == password)?.Key;
             }
 
             return usuario;
@@ -87,5 +74,30 @@ namespace Firebase_API.Repositories
                 .Child(id)
                 .DeleteAsync();
         }
+
+        public async Task<UsuarioModel> GetUsuarioByEmailAndPassword(string email, string password)
+        {
+            // Recupera todos os usuários do banco de dados
+            var usuarios = await _firebaseClient
+                .Child("Usuarios")
+                .OnceAsync<UsuarioModel>();
+
+            // Procura por um usuário com o email e senha correspondentes
+            var usuario = usuarios
+                .Where(u => u.Object.EmailUsuario == email && u.Object.SenhaUsuario == password)
+                .Select(u => new UsuarioModel
+                {
+                    Id = u.Key,
+                    NameUsuario = u.Object.NameUsuario,
+                    NameSystemUsuario = u.Object.NameSystemUsuario,
+                    EmailUsuario = u.Object.EmailUsuario,
+                    SenhaUsuario = u.Object.SenhaUsuario,
+                    DateOfBirth = u.Object.DateOfBirth
+                })
+                .FirstOrDefault();
+
+            return usuario;
+        }
+
     }
 }

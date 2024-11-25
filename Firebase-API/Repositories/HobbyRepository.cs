@@ -1,7 +1,7 @@
-﻿using Firebase_API.Models;
-using Firebase_API.Repositories.Interfaces;
-using Firebase.Database;
+﻿using Firebase.Database;
 using Firebase.Database.Query;
+using Firebase_API.Models;
+using Firebase_API.Repositories.Interfaces;
 
 namespace Firebase_API.Repositories
 {
@@ -17,20 +17,17 @@ namespace Firebase_API.Repositories
         // Método para adicionar um novo hobby
         public async Task<HobbyModel> AddHobby(HobbyModel hobby)
         {
-            if(hobby == null)
+            if (hobby == null)
             {
                 throw new ArgumentNullException(nameof(hobby), "O objeto de hobby não pode ser nulo.");
             }
 
-            // Envia o usuário para o Firebase e recebe a chave gerada
             var result = await _firebaseClient
                 .Child("Hobbies")
                 .PostAsync(hobby);
 
-            // Atribui o Id gerado automaticamente
             hobby.Id = result.Key;
 
-            // Verifica se o Id foi realmente gerado
             if (string.IsNullOrEmpty(hobby.Id))
             {
                 throw new InvalidOperationException("Erro ao gerar o ID para o hobby.");
@@ -38,7 +35,6 @@ namespace Firebase_API.Repositories
 
             return hobby;
         }
-
 
         // Método para deletar um hobby pelo ID
         public async Task<bool> DeleteHobby(string id)
@@ -58,7 +54,6 @@ namespace Firebase_API.Repositories
             return true;
         }
 
-
         // Método para listar todos os hobbies
         public async Task<List<HobbyModel>> GetAllHobbies()
         {
@@ -71,31 +66,19 @@ namespace Firebase_API.Repositories
                 Id = u.Key,
                 NameHobby = u.Object.NameHobby,
                 DescriptionHobby = u.Object.DescriptionHobby,
-                // Adicione outros campos aqui, conforme necessário
             }).ToList();
         }
 
-
-
-        // Método para obter um hhoby pelo ID
-        public async Task<HobbyModel> GetHobbiesById(string id)
+        // Método para obter um hobby pelo ID
+        public async Task<HobbyModel?> GetHobbiesById(string id)
         {
             var hobby = await _firebaseClient
                 .Child("Hobbies")
                 .Child(id)
                 .OnceSingleAsync<HobbyModel>();
 
-            if (hobby == null)
-            {
-                return null;
-            }
-
-            hobby.Id = id;
-            return hobby;
-
+            return hobby != null ? hobby : null; // Retorna o hobby ou null
         }
-
-
 
         // Método para atualizar um hobby existente pelo ID
         public async Task<HobbyModel> UpdateHobby(HobbyModel hobby, string id)

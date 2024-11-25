@@ -1,11 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Firebase_API.Repositories.Interfaces;
 using Microsoft.IdentityModel.Tokens;
-using System;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using System.Threading.Tasks;
-using Firebase_API.Repositories.Interfaces;
 
 namespace Firebase_API.Controllers
 {
@@ -18,44 +16,35 @@ namespace Firebase_API.Controllers
 
         public AuthController(IUsuarioRepository usuarioRepository, IConfiguration configuration)
         {
-            _usuarioRepository = usuarioRepository ?? throw new ArgumentNullException(nameof(usuarioRepository));
-            _configuration = configuration ?? throw new ArgumentNullException(nameof(configuration));
+            _usuarioRepository = usuarioRepository;
+            _configuration = configuration;
         }
 
         [HttpPost("login")]
-        public async Task<IActionResult> Login([FromBody] LoginModel login)
+        public async Task<IActionResult> Login(string email, string password)
         {
-            var usuario = await _usuarioRepository.GetUsuarioByEmailAndPassword(login.Email, login.Password);
-
+            var usuario = await _usuarioRepository.GetUsuarioByEmailAndPassword(email, password);
             if (usuario == null)
-            {
-                return Unauthorized(new { message = "Email ou senha inválidos" });
-            }
+                return Unauthorized("Credenciais inválidas.");
 
-            var tokenHandler = new JwtSecurityTokenHandler();
-            var key = Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]);
-            var tokenDescriptor = new SecurityTokenDescriptor
-            {
-                Subject = new ClaimsIdentity(new[]
-                {
-                    new Claim(ClaimTypes.Name, usuario.EmailUsuario),
-                    new Claim("id", usuario.Id)
-                }),
-                Expires = DateTime.UtcNow.AddHours(1),
-                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature),
-                Issuer = _configuration["Jwt:Issuer"],
-                Audience = _configuration["Jwt:Audience"]
-            };
-            var token = tokenHandler.CreateToken(tokenDescriptor);
-            var tokenString = tokenHandler.WriteToken(token);
-
-            return Ok(new { Token = tokenString });
+            var token = GenerateJwtToken(usuario.EmailUsuario);
+            return Ok(new { token });
         }
-    }
 
-    public class LoginModel
-    {
-        public string Email { get; set; } = string.Empty;
-        public string Password { get; set; } = string.Empty;
+        private string GenerateJwtToken(string email)
+        {
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
+            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+
+            var token = new JwtSecurityToken(
+                issuer: _configuration["Jwt:Issuer"],
+                audience: _configuration["Jwt:Audience"],
+                claims: new[] { new Claim(ClaimTypes.Email, email) },
+                expires: DateTime.UtcNow.AddHours(1),
+                signingCredentials: creds
+            );
+
+            return new JwtSecurityTokenHandler().WriteToken(token);
+        }
     }
 }

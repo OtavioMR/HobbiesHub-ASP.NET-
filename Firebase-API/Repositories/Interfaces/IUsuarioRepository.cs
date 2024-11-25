@@ -8,9 +8,11 @@ namespace Firebase_API.Repositories.Interfaces
     {
         Task<List<UsuarioModel>> GetAllUsuarios();
         Task<UsuarioModel> GetUsuarioById(string id);
-        Task<UsuarioModel> GetUsuarioByEmailAndPassword(string email, string password);
         Task<UsuarioModel> AddUsuario(UsuarioModel usuario);
         Task UpdateUsuario(UsuarioModel usuario, string id);
         Task DeleteUsuario(string id);
+
+        // Método adicional para autenticação
+        Task<UsuarioModel> GetUsuarioByEmailAndPassword(string email, string password);
     }
 }

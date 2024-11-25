@@ -18,34 +18,45 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "login",
-        "Type": "Firebase_API.Controllers.LoginModel",
-        "IsRequired": true
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "password",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "YourNamespace.Controllers.ChatController",
+    "ContainingType": "ChatController",
     "Method": "GetMessages",
-    "RelativePath": "api/Chat/GetMessages",
+    "RelativePath": "api/Chat/getMessages",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "groupId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "YourNamespace.Controllers.ChatController",
+    "ContainingType": "ChatController",
     "Method": "SendMessage",
-    "RelativePath": "api/Chat/SendMessage",
+    "RelativePath": "api/Chat/sendMessage",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "chatMessage",
-        "Type": "ChatMessage",
+        "Name": "message",
+        "Type": "Models.ChatMessage",
         "IsRequired": true
       }
     ],
@@ -99,8 +110,29 @@
   },
   {
     "ContainingType": "Firebase_API.Controllers.GrupoController",
+    "Method": "AdicionarMembro",
+    "RelativePath": "api/Grupo/{id}/adicionar-membro",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "usuarioId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Firebase_API.Controllers.GrupoController",
     "Method": "GetGrupo",
-    "RelativePath": "api/Grupo/{id}",
+    "RelativePath": "api/Grupo/grupo/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -125,29 +157,8 @@
   },
   {
     "ContainingType": "Firebase_API.Controllers.GrupoController",
-    "Method": "AdicionarMembro",
-    "RelativePath": "api/Grupo/{id}/adicionar-membro",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.String",
-        "IsRequired": true
-      },
-      {
-        "Name": "usuarioId",
-        "Type": "System.String",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Firebase_API.Controllers.GrupoController",
     "Method": "GetMembros",
-    "RelativePath": "api/Grupo/{id}/membros",
+    "RelativePath": "api/Grupo/grupo/{id}/membros",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -169,6 +180,22 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "Firebase_API.Controllers.GrupoController",
+    "Method": "GetHobbyById",
+    "RelativePath": "api/Grupo/hobby/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "Firebase_API.Controller.HobbyController",
@@ -301,6 +328,32 @@
   },
   {
     "ContainingType": "Firebase_API.Controllers.UsuarioController",
+    "Method": "CreateUsuario",
+    "RelativePath": "api/Usuario",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "usuario",
+        "Type": "Firebase_API.Models.UsuarioModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Firebase_API.Models.UsuarioModel",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Firebase_API.Controllers.UsuarioController",
     "Method": "GetUsuario",
     "RelativePath": "api/Usuario/{id}",
     "HttpMethod": "GET",
@@ -327,16 +380,58 @@
   },
   {
     "ContainingType": "Firebase_API.Controllers.UsuarioController",
-    "Method": "CreateUsuario",
-    "RelativePath": "api/Usuario/register",
+    "Method": "UpdateUsuario",
+    "RelativePath": "api/Usuario/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "usuario",
+        "Type": "Firebase_API.Models.UsuarioModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Firebase_API.Controllers.UsuarioController",
+    "Method": "DeleteUsuario",
+    "RelativePath": "api/Usuario/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Firebase_API.Controllers.UsuarioController",
+    "Method": "Authenticate",
+    "RelativePath": "api/Usuario/authenticate",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "usuario",
-        "Type": "Firebase_API.Models.UsuarioModel",
-        "IsRequired": true
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "password",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": [

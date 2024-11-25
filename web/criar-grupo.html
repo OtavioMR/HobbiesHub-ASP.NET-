@@ -58,23 +58,12 @@
             <label for="group-name">Nome do grupo</label>
             <input type="text" id="group-name" class="form-control" placeholder="Insira o nome do grupo" required>
 
-            <label for="category">Categoria</label>
-            <div class="input-group mb-3 position-relative">
-                <input type="text" id="category" class="form-control" placeholder="Selecione categoria" required
-                    readonly>
-                <button type="button" class="dropdown-btn btn btn-outline-secondary btn-sm" id="dropdownBtn">▼</button>
-                <div class="dropdown-content" id="dropdownContent">
-                    <a href="#"></a>
-                    <a href="#">Esporte</a>
-                    <a href="#">Dança</a>
-                    <a href="#">Música</a>
-                    <a href="#">Coleção</a>
-                </div>
-            </div>
+            <label for="hobby">Selecione um Hobby</label>
+            <select id="hobby" class="form-control" required>
+                <!-- A lista de hobbies será preenchida aqui via JavaScript -->
+            </select>
 
 
-            <label for="max-people">Quantidade máxima de pessoas</label>
-            <input type="number" id="max-people" class="form-control" placeholder="Insira a quantidade de" required>
 
             <div class="form-buttons">
                 <button type="reset" class="btn btn-danger">Cancelar</button>

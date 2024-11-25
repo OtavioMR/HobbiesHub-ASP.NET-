@@ -7,6 +7,7 @@ namespace Firebase_API.Models
         public string Id { get; set; } = string.Empty; // Inicializar propriedades
         public string NomeGrupo { get; set; } = string.Empty; // Inicializar propriedades
         public string AdministradorId { get; set; } = string.Empty; // Inicializar propriedades
+        public string HobbyId { get; set; } = string.Empty; // Hobby selecionado
         public List<string> Membros { get; set; } = new List<string>(); // Inicializar propriedades
 
         public void AdicionarMembro(string usuarioId)

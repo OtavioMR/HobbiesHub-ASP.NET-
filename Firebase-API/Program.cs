@@ -10,8 +10,11 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Configuração do Firebase
 builder.Services.AddSingleton(provider => new FirebaseClient(builder.Configuration["Firebase:DatabaseURL"]));
+
+// Configuração da injeção de dependência para os repositórios
 builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 builder.Services.AddScoped<IGrupoRepository, GrupoRepository>();
+builder.Services.AddScoped<IHobbyRepository, HobbyRepository>(); // Adicionando o IHobbyRepository
 
 // Configuração de autenticação JWT
 var key = builder.Configuration["Jwt:Key"];
@@ -39,7 +42,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 // Configuração do Swagger
 builder.Services.AddSwaggerGen(c =>
 {
-    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Minha API", Version = "v1" });
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Hobbies Hub API", Version = "v1" });
     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
         In = ParameterLocation.Header,
