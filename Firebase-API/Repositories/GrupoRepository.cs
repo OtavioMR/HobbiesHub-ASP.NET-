@@ -19,32 +19,37 @@ namespace Firebase_API.Repositories
 
         public async Task<List<GrupoModel>> GetAllGrupos()
         {
-            return (await _firebaseClient
-                .Child("Grupos")
-                .OnceAsync<GrupoModel>()).Select(g => new GrupoModel
-                {
-                    Id = g.Key,
-                    NomeGrupo = g.Object.NomeGrupo,
-                    AdministradorId = g.Object.AdministradorId,
-                    Membros = g.Object.Membros
-                }).ToList();
+            var grupos = await _firebaseClient
+                .Child("grupos")
+                .OnceAsync<GrupoModel>();
+
+            return grupos.Select(g => new GrupoModel
+            {
+                Id = g.Key,
+                NomeGrupo = g.Object.NomeGrupo,
+                DescricaoGrupo = g.Object.DescricaoGrupo,
+                HobbyId = g.Object.HobbyId,
+                AdministradorId = g.Object.AdministradorId,
+                DataCriacao = g.Object.DataCriacao,
+                Membros = g.Object.Membros,
+                Mensagens = g.Object.Mensagens
+            }).ToList();
         }
 
         public async Task<GrupoModel> GetGrupoById(string id)
         {
             var grupo = await _firebaseClient
-                .Child("Grupos")
+                .Child("grupos")
                 .Child(id)
                 .OnceSingleAsync<GrupoModel>();
 
-            grupo.Id = id;
             return grupo;
         }
 
         public async Task<GrupoModel> AddGrupo(GrupoModel grupo)
         {
             var result = await _firebaseClient
-                .Child("Grupos")
+                .Child("grupos")
                 .PostAsync(grupo);
 
             grupo.Id = result.Key;
@@ -54,7 +59,7 @@ namespace Firebase_API.Repositories
         public async Task UpdateGrupo(GrupoModel grupo, string id)
         {
             await _firebaseClient
-                .Child("Grupos")
+                .Child("grupos")
                 .Child(id)
                 .PutAsync(grupo);
         }
@@ -62,7 +67,7 @@ namespace Firebase_API.Repositories
         public async Task DeleteGrupo(string id)
         {
             await _firebaseClient
-                .Child("Grupos")
+                .Child("grupos")
                 .Child(id)
                 .DeleteAsync();
         }

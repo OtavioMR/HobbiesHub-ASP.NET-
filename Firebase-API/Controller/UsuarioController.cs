@@ -40,9 +40,20 @@ namespace Firebase_API.Controllers
         }
 
         // Método para criar um novo usuário
-        [HttpPost]
-        public async Task<ActionResult<UsuarioModel>> CreateUsuario(UsuarioModel usuario)
+        [HttpPost("register")]
+        public async Task<ActionResult<UsuarioModel>> Register([FromBody] UsuarioModel usuario)
         {
+            if (usuario == null)
+            {
+                return BadRequest("Usuário não pode ser vazio.");
+            }
+
+            // Validação do modelo
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
             var createdUsuario = await _usuarioRepository.AddUsuario(usuario);
             return CreatedAtAction(nameof(GetUsuario), new { id = createdUsuario.Id }, createdUsuario);
         }
@@ -92,6 +103,5 @@ namespace Firebase_API.Controllers
 
             return Ok(usuario);
         }
-
     }
 }

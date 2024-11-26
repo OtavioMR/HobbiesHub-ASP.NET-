@@ -1,10 +1,13 @@
-﻿namespace Models
+﻿using System;
+
+namespace Firebase_API.Models
 {
-    public class ChatMessage
+    public class ChatMessageModel
     {
-        public string GroupId { get; set; }  // Para identificar o grupo
-        public string Sender { get; set; }   // Quem enviou
-        public string Content { get; set; }  // O conteúdo da mensagem
-        public DateTime Timestamp { get; set; }  // Quando a mensagem foi enviada
+        public string Id { get; set; }
+        public string GroupId { get; set; }
+        public string UserId { get; set; }
+        public string Texto { get; set; } // Conteúdo da mensagem
+        public DateTime Hora { get; set; }
     }
 }

@@ -23,8 +23,13 @@ async function checkLoginStatus(event) {
         if (response.ok) {
             const data = await response.json();
             if (data.loggedIn) {
-                alert(`Você pode ${action} um grupo.`);
-                // Aqui você pode redirecionar o usuário ou executar outras ações
+                if (action === 'entrar') {
+                    // Redireciona para a página de grupos
+                    window.location.href = './mostrar-grupos.html'; // Substitua pelo caminho da página de grupos
+                } else {
+                    alert(`Você pode ${action} um grupo.`);
+                    // Aqui você pode redirecionar o usuário para a página de criação de grupos, se necessário
+                }
             } else {
                 alert('Você precisa fazer login para continuar.');
                 window.location.href = './login.html'; // Redireciona para a página de login

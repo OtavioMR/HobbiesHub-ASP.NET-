@@ -1,7 +1,10 @@
 ﻿using Firebase.Database;
 using Firebase.Database.Query;
 using Microsoft.AspNetCore.Mvc;
-using Models;
+using Firebase_API.Models;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Collections.Generic;
 
 [ApiController]
 [Route("api/[controller]")]
@@ -14,25 +17,25 @@ public class ChatController : ControllerBase
         _firebaseClient = firebaseClient;
     }
 
-    // Endpoint para enviar uma mensagem (POST)
     [HttpPost("sendMessage")]
-    public async Task<IActionResult> SendMessage([FromBody] ChatMessage message)
+    public async Task<IActionResult> SendMessage([FromBody] ChatMessageModel message)
     {
         if (message == null)
         {
             return BadRequest("Mensagem não pode ser vazia.");
         }
 
-        // Serializando a mensagem para o Firebase (convertendo para um formato compatível)
+        message.Hora = DateTime.UtcNow; // Definir a hora de envio da mensagem
+
         var result = await _firebaseClient
-            .Child("messages") // Acessa a coleção "messages"
-            .PostAsync(message); // Envia o objeto message serializado para o Firebase
+            .Child("groups")
+            .Child(message.GroupId)
+            .Child("mensagens")
+            .PostAsync(message);
 
         return Ok(result);
     }
 
-
-    // Novo endpoint GET para buscar mensagens de um grupo
     [HttpGet("getMessages")]
     public async Task<IActionResult> GetMessages([FromQuery] string groupId)
     {
@@ -43,29 +46,33 @@ public class ChatController : ControllerBase
 
         try
         {
-            // Recupera todas as mensagens da coleção "messages"
-            var allMessages = await _firebaseClient
-                .Child("messages")
-                .OnceAsync<ChatMessage>();
+            var groupMessages = await _firebaseClient
+                .Child("groups")
+                .Child(groupId)
+                .Child("mensagens")
+                .OnceAsync<ChatMessageModel>();
 
-            // Filtra mensagens para o grupo especificado
-            var groupMessages = allMessages
-                .Where(m => m.Object.GroupId == groupId) // Certifique-se de que "GroupId" existe no ChatMessage
-                .Select(m => m.Object)
+            var messages = groupMessages
+                .Select(m => new ChatMessageModel
+                {
+                    Id = m.Key,
+                    GroupId = m.Object.GroupId,
+                    UserId = m.Object.UserId,
+                    Texto = m.Object.Texto,
+                    Hora = m.Object.Hora
+                })
                 .ToList();
 
-            if (groupMessages == null || !groupMessages.Any())
+            if (messages == null || !messages.Any())
             {
                 return NotFound("Nenhuma mensagem encontrada para o grupo especificado.");
             }
 
-            return Ok(groupMessages);
+            return Ok(messages);
         }
         catch (Exception ex)
         {
             return StatusCode(500, $"Erro ao recuperar mensagens: {ex.Message}");
         }
     }
-
-
 }

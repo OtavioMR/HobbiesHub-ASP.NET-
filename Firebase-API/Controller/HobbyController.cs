@@ -5,7 +5,6 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Firebase_API.Controller
 {
-    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class HobbyController : ControllerBase

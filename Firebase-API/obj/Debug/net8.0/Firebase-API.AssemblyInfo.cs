@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Firebase-API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9d11e9c0a86865221dd4d1692a44ccfde12d75dc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7c003cf479d249f32ea07470d70e27f9d774043a")]
 [assembly: System.Reflection.AssemblyProductAttribute("Firebase-API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Firebase-API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HobbiesHub - Chat</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/grupo-mensagens.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+    <div class="chat-container">
+        <header>
+            <h1>HobbiesHub</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Grupos</a></li>
+                    <li><a href="#">Perfil</a></li>
+                    <li><a id="logoutButton" href="#">Sair</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <aside class="user-list">
+                <h2>Usuários</h2>
+                <ul id="userList">
+                    <!-- Usuários vão ser carregados aqui -->
+                </ul>
+            </aside>
+
+            <section class="chat-box">
+                <div class="messages" id="messages">
+                    <!-- Mensagens serão carregadas aqui -->
+                </div>
+                <div class="message-input">
+                    <input type="text" id="messageInput" placeholder="Digite sua mensagem..." />
+                    <button id="sendMessageButton"><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="./script/mostrar-grupos.js"></script>
+    <script src="./script/grupo-mensagens.js"></script>
+</body>
+</html>
