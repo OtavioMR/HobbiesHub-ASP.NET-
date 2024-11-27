@@ -2191,19 +2191,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\otavv\\.nuget\\packages\\": {}
+    "C:\\Users\\GiovannaMayumiSakaiS\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\otavv\\Desktop\\HobbiesHub-ASP.NET-\\Firebase-API\\Firebase-API.csproj",
+      "projectUniqueName": "C:\\Users\\GiovannaMayumiSakaiS\\Desktop\\HobbiesHub-ASP.NET-\\Firebase-API\\Firebase-API.csproj",
       "projectName": "Firebase-API",
-      "projectPath": "C:\\Users\\otavv\\Desktop\\HobbiesHub-ASP.NET-\\Firebase-API\\Firebase-API.csproj",
-      "packagesPath": "C:\\Users\\otavv\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\otavv\\Desktop\\HobbiesHub-ASP.NET-\\Firebase-API\\obj\\",
+      "projectPath": "C:\\Users\\GiovannaMayumiSakaiS\\Desktop\\HobbiesHub-ASP.NET-\\Firebase-API\\Firebase-API.csproj",
+      "packagesPath": "C:\\Users\\GiovannaMayumiSakaiS\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\GiovannaMayumiSakaiS\\Desktop\\HobbiesHub-ASP.NET-\\Firebase-API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\otavv\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\GiovannaMayumiSakaiS\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2279,7 +2279,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.402/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

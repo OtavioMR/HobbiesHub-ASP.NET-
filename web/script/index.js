@@ -29,6 +29,7 @@ async function checkLoginStatus(event) {
                 } else {
                     alert(`Você pode ${action} um grupo.`);
                     // Aqui você pode redirecionar o usuário para a página de criação de grupos, se necessário
+                    window.location.href = './criar-grupo.html'; // Substitua pelo caminho da página de grupos
                 }
             } else {
                 alert('Você precisa fazer login para continuar.');

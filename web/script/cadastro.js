@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     form.addEventListener('submit', async (event) => {
         event.preventDefault();
 
+        // Obtendo valores do formulário
         const nomeCompleto = document.getElementById('usuarioName').value.trim();
         const nomeUsuario = document.getElementById('usuarioNameSystem').value.trim();
         const email = document.getElementById('usuarioEmail').value.trim();
@@ -16,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const confirmarSenha = document.getElementById('usuarioSenhaConfirmar').value.trim();
         const dataNascimento = document.getElementById('dateOfBirth').value;
 
+        // Validações básicas
         if (!nomeCompleto || !nomeUsuario || !email || !senha || !confirmarSenha || !dataNascimento) {
             alert('Por favor, preencha todos os campos.');
             return;
@@ -34,6 +36,8 @@ document.addEventListener('DOMContentLoaded', () => {
             DateOfBirth: new Date(dataNascimento).toISOString()
         };
 
+        console.log('Payload enviado:', usuario);
+
         try {
             const response = await fetch('https://localhost:44327/api/Usuario/register', {
                 method: 'POST',
@@ -48,7 +52,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 window.location.href = './login.html'; // Redireciona após o cadastro bem-sucedido
             } else {
                 const errorData = await response.json();
-                alert(`Erro ao cadastrar usuário: ${errorData.message}`);
+                console.error('Erro retornado pela API:', errorData);
+
+                if (errorData.errors) {
+                    let mensagemErro = 'Erro ao cadastrar usuário:\n';
+                    for (const [campo, mensagens] of Object.entries(errorData.errors)) {
+                        mensagemErro += `${campo}: ${mensagens.join(', ')}\n`;
+                    }
+                    alert(mensagemErro);
+                } else {
+                    alert(`Erro ao cadastrar usuário: ${errorData.title || 'Erro desconhecido'}`);
+                }
             }
         } catch (error) {
             console.error('Erro:', error);
