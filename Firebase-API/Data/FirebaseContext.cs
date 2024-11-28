@@ -1,16 +1,14 @@
-﻿using Firebase.Database;
+﻿using Firebase_API.Models;
+using Microsoft.EntityFrameworkCore;
+using System.Text.RegularExpressions;
 
 namespace Firebase_API.Data
 {
-    public class FirebaseContext
+    public class ApplicationDbContext : DbContext
     {
-        private readonly FirebaseClient _client;
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 
-        public FirebaseContext(string databaseUrl)
-        {
-            _client = new FirebaseClient(databaseUrl);
-        }
-
-        public FirebaseClient Client => _client;
+        public DbSet<ChatMessageModel> Mensagens { get; set; }
+        public DbSet<GrupoModel> Grupos { get; set; }
     }
 }

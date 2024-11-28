@@ -63,29 +63,44 @@ main {
 }
 
 /* Cartões dos Grupos */
-#group-form {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: center;
+
+#grupos-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Define 3 colunas */
+    gap: 20px; /* Espaçamento entre os itens */
+    justify-items: center;
+    margin-top: 20px;
 }
 
 .grupo-item {
     background-color: #fff;
-    color: #6a1b9a;
-    border-radius: 10px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, border 0.3s ease;
+    max-width: 350px;
     width: 100%;
-    max-width: 320px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 5px solid transparent; /* Borda invisível por padrão */
 }
 
 .grupo-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-12px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    background-color: #f1f1f1;
+    border-color: #ffeb3b; /* Borda amarela quando passar o mouse */
 }
 
+.grupo-item h3 {
+    font-size: 1.6rem;
+    color: #4A148C;
+}
+
+.grupo-item p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 15px;
+}
 /* Formulários e Botões */
 input[type="text"],
 input[type="number"] {

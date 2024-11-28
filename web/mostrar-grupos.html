@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +9,6 @@
     <link rel="stylesheet" href="./css/mostrar-grupos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
-
 <body>
     <nav class="navbar navbar-expand-lg bg-primary fixed-top">
         <div class="container-fluid">
@@ -33,28 +31,8 @@
         <h1 class="text-center mb-4" style="color: #ffeb3b;">Explore os Grupos</h1>
 
         <!-- Exibição dos grupos -->
-        <div id="group-form" class="row">
-            <div class="grupo-item">
-                <div class="group-card">
-                    <h3>Grupo de Leitura</h3>
-                    <p>Compartilhe suas leituras favoritas e discuta livros com outros membros.</p>
-                    <div class="timestamp">Criado em: 12/11/2024</div>
-                </div>
-            </div>
-            <div class="grupo-item">
-                <div class="group-card">
-                    <h3>Grupo de Música</h3>
-                    <p>Conecte-se com outros músicos e compartilhe suas músicas ou projetos.</p>
-                    <div class="timestamp">Criado em: 10/11/2024</div>
-                </div>
-            </div>
-            <div class="grupo-item">
-                <div class="group-card">
-                    <h3>Grupo de Cinema</h3>
-                    <p>Para aqueles que amam assistir e discutir filmes.</p>
-                    <div class="timestamp">Criado em: 15/11/2024</div>
-                </div>
-            </div>
+        <div class="row" id="grupos-list">
+            <!-- Os grupos serão exibidos aqui -->
         </div>
     </main>
 
@@ -71,5 +49,4 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
 </body>
-
 </html>
