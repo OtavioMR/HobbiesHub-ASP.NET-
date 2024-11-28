@@ -1,6 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Firebase.Database;
+using Firebase.Database.Query;
 using Firebase_API.Models;
 using Firebase_API.Repositories.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -11,10 +14,12 @@ namespace Firebase_API.Controllers
     public class GrupoController : ControllerBase
     {
         private readonly IGrupoRepository _grupoRepository;
+        private readonly FirebaseClient _firebaseClient;
 
-        public GrupoController(IGrupoRepository grupoRepository)
+        public GrupoController(IGrupoRepository grupoRepository, FirebaseClient firebaseClient)
         {
             _grupoRepository = grupoRepository;
+            _firebaseClient = firebaseClient;
         }
 
         [HttpGet]
@@ -40,7 +45,26 @@ namespace Firebase_API.Controllers
         [HttpPost]
         public async Task<ActionResult<GrupoModel>> CreateGrupo(GrupoModel grupo)
         {
+            grupo.Id = Guid.NewGuid().ToString();
+            grupo.DataCriacao = DateTime.UtcNow;
+
             var createdGrupo = await _grupoRepository.AddGrupo(grupo);
+
+            // Adicionar mensagem automática
+            var initialMessage = new ChatMessageModel
+            {
+                GroupId = grupo.Id,
+                UserId = "system",
+                Texto = "Nova conversa iniciada",
+                Hora = DateTime.UtcNow
+            };
+
+            await _firebaseClient
+                .Child("groups")
+                .Child(grupo.Id)
+                .Child("mensagens")
+                .PostAsync(initialMessage);
+
             return CreatedAtAction(nameof(GetGrupo), new { id = createdGrupo.Id }, createdGrupo);
         }
 
